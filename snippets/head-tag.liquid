@@ -41,9 +41,9 @@
   assign base_font_bold_italic = base_font_bold | font_modify: 'style', 'italic'
 -%}
 
+{% comment %}
 {%- unless base_font.system? -%}
   <link rel="preload" as="font" href="{{ base_font | font_url }}" type="font/woff2" crossorigin>
-
   {%- if base_font_bold -%}<link rel="preload" as="font" href="{{ base_font_bold | font_url }}" type="font/woff2" crossorigin>{%- endif -%}
   {%- if base_font_italic -%}<link rel="preload" as="font" href="{{ base_font_italic | font_url }}" type="font/woff2" crossorigin>{%- endif -%}
   {%- if base_font_bold_italic -%}<link rel="preload" as="font" href="{{ base_font_bold_italic | font_url }}" type="font/woff2" crossorigin>{%- endif -%}
@@ -60,6 +60,7 @@
 {%- unless logo_font.system? -%}
   <link rel="preload" as="font" href="{{ logo_font | font_url }}" type="font/woff2" crossorigin>
 {%- endunless -%}
+{% endcomment %}
 
 {% comment %}
 {%- if canonical_url != blank  -%}

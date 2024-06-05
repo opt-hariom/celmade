@@ -109,33 +109,33 @@ div.star-container>svg {
 </div>
 {%- endif -%}
 <div id="tabDetail_1" class="celmade_tabcontent">
-  {% if section.settings.content_type_1 == 'description' %}<div class="Tab_1_Set">{{ product.description }}</div>{% endif %}
-  {% if section.settings.content_type_1 == 'content_page' %}<div class="Tab_1_Set">{{ pages[section.settings.page_1].content }}</div>{% endif %}
-  {% if section.settings.content_type_1 == 'content_text' %}<div class="Tab_1_Set">{{ section.settings.content_text_1 }}</div>{% endif %}
+  {% if section.settings.content_type_1 == 'description' %}<div class="Tab_1_Set">{{ product.description | replace: '<img src="', '<img fetchpriority="low" src="' }}</div>{% endif %}
+  {% if section.settings.content_type_1 == 'content_page' %}<div class="Tab_1_Set">{{ pages[section.settings.page_1].content | replace: '<img src="', '<img fetchpriority="low" src="' }}</div>{% endif %}
+  {% if section.settings.content_type_1 == 'content_text' %}<div class="Tab_1_Set">{{ section.settings.content_text_1 | replace: '<img src="', '<img fetchpriority="low" src="' }}</div>{% endif %}
 </div>
 
 <div id="tabDetail_2" class="celmade_tabcontent">
-  {% if section.settings.content_type_2 == 'description' %}<div class="Tab_2_Set">{{ product.description }}</div>{% endif %}
-  {% if section.settings.content_type_2 == 'content_page' %}<div class="Tab_2_Set">{{ pages[section.settings.page_2].content }}</div>{% endif %}
-  {% if section.settings.content_type_2 == 'content_text' %}<div class="Tab_2_Set">{{ section.settings.content_text_2 }}</div>{% endif %}
+  {% if section.settings.content_type_2 == 'description' %}<div class="Tab_2_Set">{{ product.description | replace: '<img src="', '<img fetchpriority="low" src="' }}</div>{% endif %}
+  {% if section.settings.content_type_2 == 'content_page' %}<div class="Tab_2_Set">{{ pages[section.settings.page_2].content | replace: '<img src="', '<img fetchpriority="low" src="' }}</div>{% endif %}
+  {% if section.settings.content_type_2 == 'content_text' %}<div class="Tab_2_Set">{{ section.settings.content_text_2 | replace: '<img src="', '<img fetchpriority="low" src="' }}</div>{% endif %}
 </div>
 
 <div id="tabDetail_3" class="celmade_tabcontent">
-  {% if section.settings.content_type_3 == 'description' %}<div class="Tab_3_Set">{{ product.description }}</div>{% endif %}
-  {% if section.settings.content_type_3 == 'content_page' %}<div class="Tab_3_Set">{{ pages[section.settings.page_3].content }}</div>{% endif %}
-  {% if section.settings.content_type_3 == 'content_text' %}<div class="Tab_3_Set">{{ section.settings.content_text_3 }}</div>{% endif %}
+  {% if section.settings.content_type_3 == 'description' %}<div class="Tab_3_Set">{{ product.description | replace: '<img src="', '<img fetchpriority="low" src="' }}</div>{% endif %}
+  {% if section.settings.content_type_3 == 'content_page' %}<div class="Tab_3_Set">{{ pages[section.settings.page_3].content | replace: '<img src="', '<img fetchpriority="low" src="' }}</div>{% endif %}
+  {% if section.settings.content_type_3 == 'content_text' %}<div class="Tab_3_Set">{{ section.settings.content_text_3 | replace: '<img src="', '<img fetchpriority="low" src="' }}</div>{% endif %}
 </div>
 
 <div id="tabDetail_4" class="celmade_tabcontent">
-  {% if section.settings.content_type_4 == 'description' %}<div class="Tab_4_Set">{{ product.description }}</div>{% endif %}
-  {% if section.settings.content_type_4 == 'content_page' %}<div class="Tab_4_Set">{{ pages[section.settings.page_4].content }}</div>{% endif %}
-  {% if section.settings.content_type_4 == 'content_text' %}<div class="Tab_4_Set">{{ section.settings.content_text_4 }}</div>{% endif %}
+  {% if section.settings.content_type_4 == 'description' %}<div class="Tab_4_Set">{{ product.description | replace: '<img src="', '<img fetchpriority="low" src="' }}</div>{% endif %}
+  {% if section.settings.content_type_4 == 'content_page' %}<div class="Tab_4_Set">{{ pages[section.settings.page_4].content | replace: '<img src="', '<img fetchpriority="low" src="' }}</div>{% endif %}
+  {% if section.settings.content_type_4 == 'content_text' %}<div class="Tab_4_Set">{{ section.settings.content_text_4 | replace: '<img src="', '<img fetchpriority="low" src="' }}</div>{% endif %}
 </div>
 
 <div id="tabDetail_5" class="celmade_tabcontent">
-  {% if section.settings.content_type_5 == 'description' %}<div class="Tab_5_Set">{{ product.description }}</div>{% endif %}
-  {% if section.settings.content_type_5 == 'content_page' %}<div class="Tab_5_Set">{{ pages[section.settings.page_5].content }}</div>{% endif %}
-  {% if section.settings.content_type_5 == 'content_text' %}<div class="Tab_5_Set">{{ section.settings.content_text_5 }}</div>{% endif %}
+  {% if section.settings.content_type_5 == 'description' %}<div class="Tab_5_Set">{{ product.description | replace: '<img src="', '<img fetchpriority="low" src="' }}</div>{% endif %}
+  {% if section.settings.content_type_5 == 'content_page' %}<div class="Tab_5_Set">{{ pages[section.settings.page_5].content | replace: '<img src="', '<img fetchpriority="low" src="' }}</div>{% endif %}
+  {% if section.settings.content_type_5 == 'content_text' %}<div class="Tab_5_Set">{{ section.settings.content_text_5 | replace: '<img src="', '<img fetchpriority="low" src="' }}</div>{% endif %}
 </div>
 </div>
 <script>

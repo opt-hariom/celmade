@@ -10,11 +10,12 @@
 
 <html lang="{{ request.locale.iso_code }}" dir="{{ lang_dir }}">
 <head>
+  {% render "font-css" %}
   {% render 'header_file' %}
   {% render 'pagefly-head' %}
   
   <!-- Google tag (gtag.js) -->
-  <script type="lazyload_js" data-src="https://www.googletagmanager.com/gtag/js?id=G-B8BWC46Y33"></script>
+  <script type="lazyload_js" data-src="https://www.googletagmanager.com/gtag/js?id=G-B8BWC46Y33" fetchpriority="high"></script>
   <script type="lazyload_js">
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -23,7 +24,7 @@
   </script>
   <!-- Google tag (gtag.js) -->
   
-  <script type="lazyload_js" data-src="https://www.googletagmanager.com/gtag/js?id=AW-11371640937"></script>
+  <script type="lazyload_js" data-src="https://www.googletagmanager.com/gtag/js?id=AW-11371640937" fetchpriority="high"></script>
   <script type="lazyload_js">
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -51,15 +52,25 @@
     {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
   </title>
 
-  <script type="lazyload_js" data-src="https://onsite.optimonk.com/script.js?account=205662"></script>
+  <script type="lazyload_js" data-src="https://onsite.optimonk.com/script.js?account=205662" fetchpriority="low"></script>
   <!-- Avada Boost Sales Script -->
   {% include 'avada-boost-sales' %}
   <!-- /Avada Boost Sales Script -->
 
   {% render 'social-meta-tags' %}
 
-  <link href="{{ 'styles.css' | asset_url }}" rel="stylesheet"/>
-  <link href="{{ 'celmade.css' | asset_url }}" rel="stylesheet"/>
+ 
+  {% if template contains "index" %}
+  	{% render "index-css" %}
+  {% elsif template contains "collection" %}
+  	{% render "collection-css" %}
+  {% elsif template contains "product" %}
+  	{% render "product-css" %}
+  {% else %}
+  	 {% render 'theme-css' %}
+  {% endif %}
+  <link data-href="{{ 'styles.css' | asset_url }}" rel="stylesheet" fetchpriority="low"/>
+  <link data-href="{{ 'celmade.css' | asset_url }}" rel="stylesheet" fetchpriority="low"/>
 
   <script>
     window.theme = window.theme || {};
@@ -195,13 +206,13 @@
     {% if template == 'index' %}{% section 'notice-popup' %}{% endif %}
   {% endif %}
 
-  <script data-src="{{ 'vendor.min.js'  | asset_url }}" type="lazyload_js"></script>
-  <script data-src="{{ 'theme.js'  | asset_url }}" type="lazyload_js"></script>
+  <script data-src="{{ 'vendor.min.js'  | asset_url }}" type="lazyload_js" fetchpriority="low"></script>
+  <script data-src="{{ 'theme.js'  | asset_url }}" type="lazyload_js" fetchpriority="low"></script>
   {% render 'banana-stand-footer' %}
 
 
   <!-- **BEGIN** Hextom TMS Translator // Main Include - DO NOT MODIFY -->
-    <script type="lazyload_js" data-src="{{ 'tms-translator.js' | asset_url }}"></script>
+    <script type="lazyload_js" data-src="{{ 'tms-translator.js' | asset_url }}" fetchpriority="low"></script>
   <!-- **END** Hextom TMS Translator // Main Include - DO NOT MODIFY -->
         
   <h3 style="display:none">{{ shop.name }}</h3>  

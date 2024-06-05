@@ -115,7 +115,7 @@
             <a class="logo__link" href="{% if request.locale.iso_code == "en" %}https://celmade.com/{% elsif request.locale.iso_code == "zh-CN" %}https://celmade.com/zh{% else %}https://celmade.com/{{ request.locale.iso_code }}{% endif %}" title="{{ shop.name }}">
               {%- if section.settings.logo != blank -%}
                 {%- capture img_size -%}{{ section.settings.logo_img_width_int | times: 2 }}x{%- endcapture -%}
-                <img class="logo__image" src="{{ section.settings.logo | img_url: img_size }}" alt="{{ section.settings.logo.alt | default: shop.name | escape }}" itemprop="logo" width="{{ section.settings.logo.width }}" height="{{ section.settings.logo.height }}" />
+                <img class="logo__image" src="{{ section.settings.logo | img_url: img_size }}" fetchpriority="high" alt="{{ section.settings.logo.alt | default: shop.name | escape }}" itemprop="logo" width="{{ section.settings.logo.width }}" height="{{ section.settings.logo.height }}" />
 
                 {%- if section.settings.enable_transparent and template.name == 'index' and section.settings.transparent_logo != blank -%}
                   <img class="logo__image-transparent" src="{{ section.settings.transparent_logo | img_url: img_size }}" alt="{{ section.settings.transparent_logo.alt | escape }}" width="{{ section.settings.transparent_logo.width }}" height="{{ section.settings.transparent_logo.height }}" aria-hidden="true" />

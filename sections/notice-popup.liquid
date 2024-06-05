@@ -1,0 +1,224 @@
+{% if section.settings.show_notice == true %}
+{% if section.settings.mode != 'disabled' %}
+
+  <section class="section-{{ section.id }} cc-popup cc-popup--{{ section.settings.position }}"
+    data-freeze-scroll="false"
+    data-section-id="{{ section.id }}"
+    data-section-type="newsletter-popup"
+    data-dismiss-for-days="{{ section.settings.popup_dismiss_for_days }}"
+    data-delay-seconds="{{ section.settings.popup_delay_seconds }}"
+    data-test-mode="{% if section.settings.mode == 'testing' %}true{% else %}false{% endif %}">
+    <div class="cc-popup-background"></div>
+    <div class="cc-popup-modal {% if section.settings.image != blank %} cc-popup-modal--has-image{% endif %} celmade_notice_wrap"
+         role="dialog"
+         aria-modal="true">
+
+      <button type="button" class="cc-popup-close celmade-popup-close" aria-label="{{ 'general.accessibility_labels.close' | t | escape }}">
+        {% render 'popup-close' %}
+      </button>
+
+      <div class="cc-popup-container m-popup-notice">
+        {%- if section.settings.title != blank or section.settings.text != blank or section.settings.image != blank or section.settings.under_image != blank -%}
+          <div class="cc-popup-content celmade_notice_content">
+            {%- if section.settings.image != blank -%}
+              <img src="{{ section.settings.image | img_url: 'master' }}">
+              {% comment %}{% render 'responsive-image', image: section.settings.image %}{% endcomment %}
+              {% else %}
+                {%- if section.settings.title != blank or section.settings.text != blank or section.settings.under_image != blank -%}
+                  <div class="celmade-popup-text">
+                    {%- if section.settings.title != blank -%}
+                      <h2 class="celmade-popup-title">{{ section.settings.title }}</h2>
+                    {%- endif -%}
+                    {%- if section.settings.text != blank -%}
+                      <div class="celmade-popup-rte">{{ section.settings.text }}</div>
+                    {%- endif -%}
+                    {%- if section.settings.under_image != blank -%}
+                      <div class="celmade-popup-image"><img src="{{ section.settings.under_image | img_url: '800x' }}"></div>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+            {%- endif -%}
+
+            </div>
+          </div>
+        {%- endif -%}
+
+      </div>
+    </div>
+  </section>
+
+{% endif %}
+{% endif %}
+
+{% style %}
+
+.celmade_notice_wrap {
+  width: 580px !important;
+  border-radius: 5px;
+  max-width: 800px;
+  max-height: 100%;
+  {% if section.settings.title != blank or section.settings.text != blank %}
+  background-color: #fff;
+  {% else %}
+  background-color: transparent !important;
+  {% endif %}
+}
+.celmade_notice_content {
+  padding: 0 !important;
+}
+.celmade-popup-close {
+  color: #000 !important;
+}
+.celmade-popup-title {
+  font-size: 36px;
+  color: #000;
+  margin-top: 36px;
+  margin-bottom: 24px;
+}
+.celmade-popup-rte {
+  font-size: 18px;
+  color: #000;
+  text-align: left;
+  {%- if section.settings.title != blank -%}
+  padding: 0 36px;
+  {% else %}
+  padding: 36px;
+  {% endif %}
+}
+.celmade-popup-image {
+  max-width: 800px;
+}
+.m-popup-notice {
+  max-width: 800px;
+  max-height: 1200px;
+}
+.popup_no_link_text {
+  color: #707173;
+  font-weight: 600;
+}
+.cc-modal-window__content-container {
+  border: 1px solid #fff;
+  border-radius: 5px !important;
+  overflow: auto !important;
+}
+.celmade_button {
+  display: flex;
+}
+.celmade_button_sp {
+  margin-right: 12px;
+}
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "Notice Popup",
+    "class": "section-popup",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_notice",
+        "label": "Show Notification",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "mode",
+        "label": "Display mode",
+        "default": "disabled",
+        "options": [
+          {
+            "value": "enabled",
+            "label": "Use Settings"
+          },
+          {
+            "value": "testing",
+            "label": "Keep Posting"
+          },
+          {
+            "value": "disabled",
+            "label": "Disabled"
+          }
+        ],
+        "info": "Test mode displays your popup each time even after dismissing it. Switch to Enabled once you are happy with how your popup looks."
+      },
+      {
+        "type": "range",
+        "id": "popup_delay_seconds",
+        "label": "Delay",
+        "info": "Delay is disabled in theme editor for visibility",
+        "default": 2,
+        "min": 2,
+        "max": 60,
+        "step": 1,
+        "unit": "sec"
+      },
+      {
+        "type": "range",
+        "id": "popup_dismiss_for_days",
+        "label": "Frequency",
+        "default": 1,
+        "info": "Number of days before a dismissed popup reappears",
+        "min": 1,
+        "max": 7,
+        "step": 1,
+        "unit": "day"
+      },
+      {
+        "type": "select",
+        "id": "position",
+        "label": "Position",
+        "default": "center",
+        "options": [
+          {
+            "value": "top-left",
+            "label": "Top left"
+          },
+          {
+            "value": "top-right",
+            "label": "Top right"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "bottom-left",
+            "label": "Bottom left"
+          },
+          {
+            "value": "bottom-right",
+            "label": "Bottom right"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Content"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "800px x 1200px recommended"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Celmade Event Popup"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>Notify customers for promotions, special events or offers.</p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "under_image",
+        "label": "Image Under Text",
+        "info": "800px x 800px recommended"
+      }
+    ]
+  }
+{% endschema %}

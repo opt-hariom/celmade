@@ -1,0 +1,558 @@
+<script type="lazyload_js" data-src="https://cdn.shopify.com/extensions/fb7f361f-6233-4791-a72b-ca64df26e256/inbox-311/assets/inbox-chat-loader.js"></script>
+
+<link rel="stylesheet" data-href="https://cdn.shopify.com/extensions/cc36af9d-ec91-45ba-ad72-fe534618b3ef/ecomsend-popups-16/assets/style.css">
+
+<!-- BEGIN app block: shopify://apps/t-lab-ai-language-translate/blocks/custom_translations/b5b83690-efd4-434d-8c6a-a5cef4019faf -->
+<!-- BEGIN app snippet: custom_translation_scripts -->
+  <script>
+    "use strict";var __spreadArray=this&&this.__spreadArray||function(n,t,r){if(r||2===arguments.length)for(var e,a=0,i=t.length;a<i;a++)!e&&a in t||((e=e||Array.prototype.slice.call(t,0,a))[a]=t[a]);return n.concat(e||Array.prototype.slice.call(t))};!function(){var e=/\([0-9]*?\)$/,w=/\r?\n|\r|\t|\xa0|\u200B|\u200E|&nbsp;| /g,l=/<\/?[a-z][\s\S]*>/i,b=/\{\{\s*([a-zA-Z_]\w*)\s*\}\}/g,t=/^(https:)?\/\/cdn\.shopify\.com\/(.+)\.(png|jpe?g|gif|webp|svgz?|bmp|tiff?|ico)/i,f=/^(https:)?\/\/cdn\.shopify\.com/i,r=/\b(?:https?|ftp)?:?\/\/?[^\s\/]+\/[^\s]+\.(?:png|jpe?g|gif|webp|svgz?|bmp|tiff?|ico)\b/i,d="__label:",a=document.createElement("textarea");function M(n){return t.test(n.trim())||r.test(n.trim())}function v(n){n=n.trim();return 0<n.indexOf("://")||0===n.indexOf("//")}function y(n){return a.innerHTML=n,a.value}function m(n){return T(y(n))}function T(n){return n.trim().replace(e,"").replace(w,"").trim().toLocaleLowerCase()}function z(n){return n.trim().toLocaleLowerCase().replace("https:","")}var i=["div","span","a","p","h1","h2","h3","h4","h5","h6","ul","ol","li"];function s(n,t){for(var r=0,e=i;r<e.length;r++){var a=e[r];if(n.substring(t,t+a.length+1)==="<"+a)return 1}}function S(n,t,r){for(var e=0,a=0,i=!1;e<n.length&&a<t.length;){for(;" "===n[e]&&(0===e||">"!==n[e-1]);)e++;for(;" "===t[a]&&(0===a||">"!==t[a-1]);)a++;if(s(n,e)){for(;e<n.length&&">"!==n[e];)e++;for(e++;" "===n[e];)e++}if(s(t,a)){for(;a<t.length&&">"!==t[a];)a++;for(a++;" "===t[a];)a++}var o=function(n,t,r){for(var e=[0,0],a=Object.keys(r),i=0;i<a.length;i++){var o=a[i],u=r[o];if(n.startsWith(u,t)){e=[u.length,o.length];break}}return e}(t,a,r),u=o[0],o=o[1];if(u)a+=u,e+=o;else{if(n[e]!==t[a])return;i=!0,e++,a++}}return i&&e===n.length&&a===t.length}function k(){function r(n){var t,r="".concat(n.path).concat(n.t).concat(null!=(r=n.size)?r:"",".").concat(n.i);return n.o&&(r="".concat(n.path).concat(n.o,"/").concat(n.t).concat(null!=(t=n.size)?t:"",".").concat(n.i)),n.host&&(r="".concat(null!=(t=n.protocol)?t:"","//").concat(n.host).concat(r)),n.u&&(r+=n.u),r}return{l:function(n){var t=!0,r=(/^(https?|ftp|file):\/\//i.test(n)||n.startsWith("//")||(t=!1,n="https://example.com"+n),t);n.startsWith("//")&&(r=!1,n="https:"+n);try{new URL(n)}catch(n){return null}var e,a,i,o,u,s,n=new URL(n),c=n.pathname.split("/").filter(function(n){return n});return c.length<1||(a=c.pop(),e=null!=(e=c.pop())?e:null,null===(a=a.match(/([^\s]+)\.(png|jpe?g|gif|webp|svgz?|bmp|tiff?|ico)$/i)))?null:(s=a[1],a=a[2],i=s.match(/_(\{width\}x*|\{width\}x\{height\}|\d{3,4}x\d{3,4}|\d{3,4}x|x\d{3,4}|pinco|icon|thumb|small|compact|medium|large|grande|original|master)(_crop_\w+)*(@[2-3]x)*(.progressive)*$/i),o=s,(u=null)!==i&&(o=s.substring(0,i.index),u=i[0]),s=0<c.length?"/"+c.join("/")+"/":"/",{protocol:r?n.protocol:null,host:t?n.host:null,path:s,u:n.search,o:e,t:o,size:u,i:a,version:n.searchParams.get("v"),width:n.searchParams.get("width")})},v:r,m:function(n){return(n.o?"/".concat(n.o,"/"):"/").concat(n.t,".").concat(n.i)},p:function(n){return(n.o?"/".concat(n.o,"/"):"/").concat(n.t,".").concat(n.i,"?v=").concat(n.version||"0")},g:function(n,t){return r({protocol:t.protocol,host:t.host,path:t.path,u:t.u,o:t.o,t:t.t,size:t.size,i:t.i,version:t.version,width:t.width})}}}var x={};function o(t,a){var s=new Map,r=new Map,i=new Map,e=new Map,o=new Map,u=new Map,c=0,l=!1,f=k();function d(n,t,r){n&&t&&(r.set(n,t),l=!0)}function n(n){if(n&&n.trim()&&0!==s.size){var t=s.get(T(n));if(t)return t;var e,a,i,o=n;if(o&&o.trim()&&0!==r.size&&(r.forEach(function(n,t){var r=new RegExp(t),r=o.match(r);r&&1<r.length&&!e&&(e=t,a=n,i=r)}),e)&&a&&i){var u=i.slice(1),t=a.match(b);if(t&&t.length===u.length)return t.reduce(function(n,t,r){return n.replace(t,u[r])},a)}}return null}function v(n){if(n&&n.trim()&&0!==i.size&&!(n.length>1.2*c)){var r=5e3<=(n=(n=n).trim().replace(w,"").replace(/&amp;/g,"&").replace(/&gt;/g,">").replace(/&lt;/g,"<").trim().toLocaleLowerCase()).length?n.slice(0,1e3):n,n=i.get(r);if(null!=n)return n;if(a.h){t.log("dictionary","Using custom html comparison for: ",r,x);var e=null;if(i.forEach(function(n,t){!e&&S(t,r,x)&&(e=n)}),e)return e}}return null}function m(n){if(n&&n.trim()&&0!==e.size){var t=z(n),t=e.get(t);if(t)return t;t=f.l(n);if(t){n=f.p(t).toLocaleLowerCase(),n=e.get(n);if(n)return n;n=f.m(t).toLocaleLowerCase(),t=e.get(n);if(t)return t}}return null}function p(n){return!n||!n.trim()||0===o.size||void 0===(n=o.get(T(n)))?null:n}function g(n){return!n||!n.trim()||0===u.size||void 0===(n=u.get(z(n)))?null:n}function h(){var n={T:s,S:r,H:i,M:e,k:o,D:u,_:l,C:c,A:x};return JSON.stringify(n,function(n,t){return t instanceof Map?Object.fromEntries(t.entries()):t})}return{N:function(n,t){d(n,t,s)},U:function(n,t){d(n,t,r)},I:function(n,t){var r;n!==t&&(d(5e3<=(r=y(r=n).trim().replace(w,"").trim().toLocaleLowerCase()).length?r.slice(0,1e3):r,t,i),c=Math.max(c,n.length))},O:function(n,t){d(n,t,e),(n=f.l(n))&&(d(f.p(n).toLocaleLowerCase(),t,e),d(f.m(n).toLocaleLowerCase(),t,e))},j:function(n,t){d(n.replace("[img-alt]","").replace(w,"").trim().toLocaleLowerCase(),t,o)},R:function(n,t){d(n,t,u)},q:function(){return t.log("dictionary","Translation dictionaries: ",h),a.h&&i.forEach(function(n,r){s.forEach(function(n,t){r.includes(t)&&r!==t&&(x[t]=T(n))})}),{_:l,L:n,B:v,$:m,J:p,F:g}}}}function H(n,t,r){function s(n){if(n&&!v(n)&&n.includes("_")){var t=n.split("_");if(2===t.length)return t[1].trim()?t:[t[0]]}return[n]}var c=o(r,t);return n.forEach(function(n){var u,t;n&&(u="string"==typeof(t=n)||t instanceof String?JSON.parse(n):n)&&Object.keys(u).forEach(function(n){var t,r,e,a,i,o;n&&(t=u[n])&&n!==t&&(n.startsWith("[img-alt]")?c.j(n,t):n.startsWith("[img-src]")?(r=z(n.replace("[img-src]","")),c.O(r,t)):l.test(n)?c.I(n,t):M(n)?(r=z(n),c.O(r,t)):v(r=n)||f.test(r.trim())?(o=z(n),c.R(o,t)):(0===n.trim().indexOf("/")&&(o=z(n),c.R(o,t),o=m(n),c.N(o,t)),b.test(n)?(a=(o=n).match(b))&&0<a.length&&(e=o.replace(/[-\/\\^$*+?.()|[\]]/g,"\\$&"),a.forEach(function(n){e=e.replace(n,"(.*)")}),c.U(e,t)):n.startsWith(d)?(o=t.replace(d,""),a=n.replace(d,""),c.N(m(a),o)):(a=s(n),i=s(t),((o=(o=n).match(/\b\w+\b/g))?o.length:0)<=5&&1<a.length&&a.length===i.length?a.forEach(function(n,t){n!==i[t]&&c.N(m(n),i[t])}):(o=m(n))!==t&&c.N(o,t))))})}),c.q()}function D(){return{P:function(n,t){var r=new XMLHttpRequest;r.onload=function(){200<=r.status&&r.status<300&&t(JSON.parse(r.responseText))},r.open("GET",n),r.send()}}}function h(b,y){var i=k();function T(e,n,a){n.forEach(function(n){var t,r=e.getAttribute(n);r&&(t=null,t=n.includes("href")?a.F(r):a.L(r))&&e.setAttribute(n,t)})}function S(n,t,r){var e,a=n.getAttribute(t);a&&((e=o(a=z(a.split("&")[0]),r))?n.setAttribute(t,e):(e=r.F(a))&&n.setAttribute(t,e))}function x(n,t,r){var e,a=n.getAttribute(t);a&&(r=o((a=a.split(",").filter(function(n){return!!n}).map(function(n){var n=n.trim().split(" "),t=n[0].split("&");return{url:t[0],width:t[1],size:n[1]}}))[0].url,r))&&(e=i.l(r))&&(r=a.map(function(n){var t=n.url,r=i.l(t);return r&&(t=i.g(r,e)),n.width&&(t="".concat(t,"&").concat(n.width)),t=n.size?"".concat(t," ").concat(n.size):t}).join(","))&&n.setAttribute(t,r)}function o(n,t){var r=t.$(n);return r||(null===(r=i.l(n))||(n=i.m(r),null===(t=t.$(n)))||null===(n=i.l(t))?null:i.g(r,n))}function H(t,r){var n,e,a,i,o;["src","data-src","data-source","data-href","data-zoom","data-master","data-bg"].forEach(function(n){return S(t,n,r)}),["srcset","data-srcset"].forEach(function(n){return x(t,n,r)}),e="alt",a=r,(o=(n=t).getAttribute(e))&&((i=a.J(o))?n.setAttribute(e,i):(i=a.L(o))&&n.setAttribute(e,i))}return{V:function(n){return!(!n||n.nodeType!==Node.ELEMENT_NODE||y.G.includes((n=n).tagName.toLowerCase())||n.classList.contains("tl-switcher-container")||(n=n.parentNode)&&["SCRIPT","STYLE"].includes(n.nodeName.toUpperCase()))},W:function(n){var t,r;n.nodeType===Node.TEXT_NODE&&null!=(t=n.textContent)&&t.trim()&&(t=b.L(n.textContent))&&(r=n.textContent.trim().replace(e,"").trim(),n.textContent=n.textContent.replace(r,t))},X:function(n){var t;return!(null!=(t=n.textContent)&&"string"==typeof t&&0===t.trim().length||!n.innerHTML||!(t=b.B(n.innerHTML))||(n.innerHTML=t,0))},Y:function(n){switch(n.tagName.toLowerCase()){case"a":d=n,v=b,(m=y).Z&&(p=d,g=m.K,["href","data-href"].forEach(function(n){var t=p.getAttribute(n);if(!t)return!1;!t.startsWith("/")||t.startsWith("//")||t.startsWith(g)||(t="".concat(g).concat(t),p.setAttribute(n,t))})),h=d,w=v,["href","data-href","data-src","data-zoom"].forEach(function(n){var t,r=h.getAttribute(n);r&&(M(r)?(t=w.$(r))&&h.setAttribute(n,t):(t=w.F(r))&&h.setAttribute(n,t))});break;case"input":d=m=b,(f=(l=v=n).getAttribute("type"))&&("submit"===f||"button"===f)&&(f=l.getAttribute("value"),d=d.L(f))&&l.setAttribute("value",d),T(v,["placeholder"],m);break;case"textarea":T(n,["placeholder"],b);break;case"img":H(n,b);break;case"picture":c=b,[].slice.call(n.childNodes).forEach(function(n){if(n.tagName)switch(n.tagName.toLowerCase()){case"source":x(n,"data-srcset",c),x(n,"srcset",c);break;case"img":H(n,c)}});break;case"div":l=f=b,(o=i=a=n)&&(i=window.getComputedStyle(i).getPropertyValue("background-image"))&&"none"!==i&&(i=i.match(/url\(['"]?(.*?)['"]?\)/))&&i[1]&&(i=i[1],l=l.$(i))&&(o.style.backgroundImage='url("'.concat(l,'")')),u=a,s=f,["src","data-src","data-bg"].forEach(function(n){return S(u,n,s)}),["data-bgset"].forEach(function(n){return x(u,n,s)}),["data-href"].forEach(function(n){return T(u,[n],s)});break;case"button":i=b,(a=(o=n).getAttribute("value"))||(i=i.L(a))&&o.setAttribute("value",i);break;case"iframe":r=b,(e=(t=n).getAttribute("src"))&&(r=r.F(e))&&t.setAttribute("src",r);break;case"video":!function(n,t){for(var r=["src"],e=0;e<r.length;e++){var a=r[e],i=n.getAttribute(a);if(!i)return;i=t.F(i);i&&n.setAttribute(a,i)}}(n,b)}var t,r,e,a,i,o,u,s,c,l,f,d,v,m,p,g,h,w}}}function c(n,a,i){e=new Set;var e,r,o,u={add:function(n){e.add(n)},nn:function(){return 0<e.size},tn:function(){return e.size},rn:function(n){var t=Array.from(e),r=t.slice(0,n);return e=new Set(t.slice(n)),r}},s=(r=a.en,o=new Map,setInterval(function(){var r=Date.now();o.forEach(function(n,t){n<=r&&o.delete(t)})},1e3),{add:function(n){var t=Date.now()+r;o.set(n,t)},has:function(n){var t=Date.now(),r=o.get(n);return void 0!==r&&!(r<=t&&(o.delete(n),1))}}),c=!1,l=0,f=5,d=h(n,a),v=null;function m(n){var t,r,e;n&&(n.nodeType===Node.TEXT_NODE&&d.V(n.parentElement)?d.W(n):d.V(n)&&(d.Y(n=n),(["img","picture","button","p","a","input"].includes(n.tagName.toLowerCase())||(t=(t=n).getBoundingClientRect(),r=window.innerHeight||document.documentElement.clientHeight,e=window.innerWidth||document.documentElement.clientWidth,r=t.top<=r&&0<=t.top+t.height,e=t.left<=e&&0<=t.left+t.width,r&&e))&&!s.has(n)?p(n):(function t(n,r){var e=[];return n.nodeType===Node.ELEMENT_NODE&&n.tagName.toLowerCase()===r&&e.push(n),n.hasChildNodes()&&n.childNodes.forEach(function(n){e=e.concat(t(n,r))}),e}(n,"img").forEach(p),u.add(n),null===v&&(v=setInterval(g,a.an)))))}function p(n){i.log("messageHandler","Processing message:",n);t=n;var t=!d.V(t)||(i.log("nodes",t.tagName,t),d.X(t))?[]:[].slice.call(t.childNodes);s.add(n),i.log("messageHandler","Child nodes:",t),t.forEach(m)}function g(){if(i.log("messageHandler","Start processing messages: processing:",c,"buffer size:",u.tn()),!c)if(u.nn()){c=!(l=0);for(var n=Math.min(a.on,u.tn()),t=0,r=u.rn(n);t<r.length;t++){var e=r[t];s.has(e)||p(e)}c=!1}else f<=++l&&null!==v&&(clearInterval(v),v=null)}return{un:function(n){switch(n.type){case"childList":n.addedNodes.forEach(m),n.target.childNodes.length<=10&&n.target.childNodes.forEach(m);break;case"attributes":var t=n.target;d.V(t)&&(t=t)&&["img","button","input","textarea"].includes(t.tagName.toLowerCase())&&d.Y(t);break;case"characterData":a.sn&&(t=n.target)&&t.nodeType===Node.TEXT_NODE&&m(t.parentNode)}}}}function _(n,e,r){var a=c(n,e,r),n={subtree:!0,childList:!0,attributes:e.cn,characterData:e.sn},i=[],o=!1;function u(){for(var n=e.ln,t=0;t<n&&i.length;t++){var r=i.shift();r&&a.un(r)}0<i.length?requestAnimationFrame(u):o=!1}new MutationObserver(function(n,t){r.log("observer","Observer:",n),e.fn?(i.push.apply(i,n),o||(o=!0,requestAnimationFrame(u))):n.forEach(a.un)}).observe(document.documentElement,n)}void 0===window.TranslationLab&&(window.TranslationLab={}),window.TranslationLab.CustomTranslations={apply:function(n,t){var r,e,a,i,o,u,s,c,l,f,d,v,m,p,g;function h(n,t){for(var r=[],e=2;e<arguments.length;e++)r[e-2]=arguments[e];for(var a=0,i=r;a<i.length;a++){var o=i[a];if(o&&void 0!==o[n])return o[n]}return t}n&&!n.isPrimaryLocale&&n.translationsMetadata&&n.translationsMetadata.length&&(r=function(){var a;try{a=window.localStorage.getItem("tlab_debug_mode")||null}catch(n){a=null}return{log:function(n,t){for(var r=[],e=2;e<arguments.length;e++)r[e-2]=arguments[e];!a||"observer"===n&&"all"===a||("all"===a||a===n||"custom"===n&&"custom"===a)&&(n=r.map(function(n){if("function"==typeof n)try{return n()}catch(n){return"Error generating parameter: ".concat(n.message)}return n}),console.log.apply(console,__spreadArray([t],n,!1)))}}}(),e=n.locale,a=n.K,t=t,g=r,i=h("useMessageHandler",!0,p=(p=window.localStorage.getItem("tlab_feature_options"))?JSON.parse(p):null,t),o=h("messageHandlerBatchSize",100,p,t),u=h("messageHandlerInterval",300,p,t),s=h("messageHandlerCooldown",2e3,p,t),c=h("useMutationQueue",!1,p,t),l=h("mutationQueueSize",100,p,t),f=h("localizeUrls",!1,p,t),d=h("processShadowRoot",!1,p,t),v=h("attributesMutations",!1,p,t),m=h("processCharacterData",!1,p,t),p=h("useCustomHtmlComparison",!1,p,t),g.log("dictionary","useMessageHandler:",i),g.log("dictionary","messageHandlerBatchSize:",o),g.log("dictionary","messageHandlerInterval:",u),g.log("dictionary","messageHandlerCooldown:",s),g.log("dictionary","useMutationQueue:",c),g.log("dictionary","mutationQueueSize:",l),g.log("dictionary","localizeUrls:",f),g.log("dictionary","processShadowRoot:",d),g.log("dictionary","attributesMutations:",v),g.log("dictionary","processCharacterData:",m),g.log("dictionary","useCustomHtmlComparison:",p),(g=H(n.translationsMetadata,t={G:["html","head","meta","script","noscript","style","link","canvas","svg","g","path","br","hr"],locale:e,K:a,dn:i,on:o,an:u,en:s,fn:c,ln:l,Z:f,vn:d,cn:v,sn:m,h:p},r))._)&&(t.dn&&_(g,t,r),window.addEventListener("DOMContentLoaded",function(){var i;i=D(),{mn:function(){function e(n){n=/\/products\/(.+?)(\?.+)?$/.exec(n);return n?n[1]:null}var n,t,r,a=document.querySelector(".cbb-frequently-bought-selector-label-name");a&&"true"!==a.getAttribute("translated")&&(n=e(window.location.pathname))&&(t="https://".concat(window.location.host,"/products/").concat(n,".json"),r="https://".concat(window.location.host).concat(window.Shopify.routes.root,"products/").concat(n,".json"),i.P(t,function(n){a.childNodes.forEach(function(t){t.textContent===n.product.title&&i.P(r,function(n){t.textContent!==n.product.title&&(t.textContent=n.product.title,a.setAttribute("translated","true"))})})}),document.querySelectorAll('[class*="cbb-frequently-bought-selector-link"]').forEach(function(t){var n,r;"true"!==t.getAttribute("translated")&&(r=t.getAttribute("href"))&&(n=e(r))&&(r="https://".concat(window.location.host).concat(window.Shopify.routes.root,"products/").concat(n,".json"),i.P(r,function(n){t.textContent!==n.product.title&&(t.textContent=n.product.title,t.setAttribute("translated","true"))}))}))}}.mn()}))}}}();
+  </script>
+<!-- END app snippet -->
+
+  <script>
+  (function() {
+    var ctx = {
+      locale: 'en',
+      isPrimaryLocale: true,
+      rootUrl: '',
+      translationsMetadata: [{}],
+      template: "index",
+    };
+    var settings = null;
+    TranslationLab.CustomTranslations.apply(ctx, settings);
+  })()
+  </script>
+
+<!-- END app app block -->
+
+<!-- BEGIN app block: shopify://apps/t-lab-ai-language-translate/blocks/language_switcher/b5b83690-efd4-434d-8c6a-a5cef4019faf -->
+<style>
+  .tl-switcher-container.tl-custom-position {
+    border-width: 1px !important;
+    border-style: solid;
+    border-color: #000000 !important;
+    background-color: #ffffff !important;
+  }
+
+  .tl-custom-position.top-right {
+    top: 10px;
+    right: 20px;
+    bottom: auto;
+    left: auto;
+  }
+
+  .tl-custom-position.top-left {
+    top: 10px;
+    right: auto;
+    bottom: auto;
+    left: 20px;
+  }
+
+  .tl-custom-position.bottom-left {
+    position: fixed;
+    top: auto;
+    right: auto;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .tl-custom-position.bottom-right {
+    position: fixed;
+    top: auto;
+    right: 20px;
+    bottom: 20px;
+    left: auto;
+  }
+
+  .tl-custom-position > div {
+    font-size: 14px !important;
+    /* font-weight:  !important; */
+    color: #5c5c5c !important;
+  }
+
+  .tl-custom-position .tl-label {
+    color: #5c5c5c !important;
+  }
+
+  .tl-dropdown,
+  .tl-overlay,
+  .tl-options {
+    display: none;
+  }
+
+  .tl-dropdown.bottom-right,
+  .tl-dropdown.bottom-left {
+    bottom: 100%;
+    top: auto;
+  }
+
+  .tl-dropdown.top-right,
+  .tl-dropdown.bottom-right {
+    right: 0;
+    left: auto;
+  }
+
+  .tl-options.bottom-right,
+  .tl-options.bottom-left {
+    bottom: 100%;
+    top: auto;
+  }
+
+  .tl-options.top-right,
+  .tl-options.bottom-right {
+    right: 0;
+    left: auto;
+  }
+
+  div:not(.tl-inner) > .tl-switcher .tl-select,
+  div.tl-selections {
+    border-width: 0px;
+  }
+
+  .tl-switcher-container.hidden {
+    display: none;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+</style>
+
+<link data-href="//cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/advanced-switcher.css" rel="stylesheet" />
+
+<script type="text/template" id="tl-switcher-template">
+<!-- BEGIN app snippet: language_and_custom_currency_switcher --><div class="tl-switcher-container hidden top-right">
+  <div class="tl-wrapper">
+    <div class="tl-selections">
+      <div class="tl-selection tl-language">
+        
+        <img class="tl-flag" loading="lazy" width="20" height="18" alt="Main selection country flag for language - English" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/gb.svg">
+
+        <span class="tl-label tl-name">English</span>
+      </div>
+      <div class="tl-selection tl-currency">
+        
+        <img class="tl-flag" loading="lazy" width="20" height="18" alt="Main selection country flag for currency" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+        
+        <span class="tl-label"></span>
+      </div>
+    </div>
+    <div class="tl-dropdown top-right">
+      <div class="tl-inner">
+        <span class="tl-close-btn">
+          <svg style="stroke:black; stroke-width:5px; width:24px;" class="icon icon-close" viewBox="0 0 60 60">
+            <path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"></path>
+          </svg>
+        </span>
+        <div class="tl-title">Language</div>
+        <div class="tl-switcher tl-language"><form method="post" action="/localization" id="localization_form" accept-charset="UTF-8" class="shopify-localization-form" enctype="multipart/form-data"><input type="hidden" name="form_type" value="localization" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="return_to" value="/?_ab=0&_fd=0&_sc=1" />
+          <div class="tl-select">
+            <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown selection country flag for language - English" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/gb.svg">
+            <span class="tl-label tl-name">English</span>
+          </div>
+          <ul class="tl-options top-right" role="list">
+            <li class="tl-option active" data-value="en">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - English" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/gb.svg">
+              <span class="tl-label tl-name" for="English">English</span>
+            </li>
+            <li class="tl-option " data-value="zh-CN">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - 简体中文" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/cn.svg">
+              <span class="tl-label tl-name" for="简体中文">简体中文</span>
+            </li>
+            <li class="tl-option " data-value="ar">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - العربية" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/sa.svg">
+              <span class="tl-label tl-name" for="العربية">العربية</span>
+            </li>
+            <li class="tl-option " data-value="fr">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - français" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/fr.svg">
+              <span class="tl-label tl-name" for="français">français</span>
+            </li>
+            <li class="tl-option " data-value="it">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - Italiano" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/it.svg">
+              <span class="tl-label tl-name" for="Italiano">Italiano</span>
+            </li>
+            <li class="tl-option " data-value="de">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - Deutsch" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/de.svg">
+              <span class="tl-label tl-name" for="Deutsch">Deutsch</span>
+            </li>
+            <li class="tl-option " data-value="ja">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - 日本語" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/jp.svg">
+              <span class="tl-label tl-name" for="日本語">日本語</span>
+            </li>
+            <li class="tl-option " data-value="fa">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - فارسی" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/ir.svg">
+              <span class="tl-label tl-name" for="فارسی">فارسی</span>
+            </li>
+            <li class="tl-option " data-value="pt-PT">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - português" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/pt.svg">
+              <span class="tl-label tl-name" for="português">português</span>
+            </li>
+            <li class="tl-option " data-value="ru">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - русский" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/ru.svg">
+              <span class="tl-label tl-name" for="русский">русский</span>
+            </li>
+            <li class="tl-option " data-value="es">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - Español" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/es.svg">
+              <span class="tl-label tl-name" for="Español">Español</span>
+            </li>
+            <li class="tl-option " data-value="tr">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - Türkçe" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/tr.svg">
+              <span class="tl-label tl-name" for="Türkçe">Türkçe</span>
+            </li>
+            <li class="tl-option " data-value="th">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - ภาษาไทย" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/th.svg">
+              <span class="tl-label tl-name" for="ภาษาไทย">ภาษาไทย</span>
+            </li>
+            <li class="tl-option " data-value="vi">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - Tiếng Việt" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/vn.svg">
+              <span class="tl-label tl-name" for="Tiếng Việt">Tiếng Việt</span>
+            </li>
+            <li class="tl-option " data-value="hi">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - हिन्दी" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/in.svg">
+              <span class="tl-label tl-name" for="हिन्दी">हिन्दी</span>
+            </li>
+            <li class="tl-option " data-value="pl">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - Polski" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/pl.svg">
+              <span class="tl-label tl-name" for="Polski">Polski</span>
+            </li>
+            <li class="tl-option " data-value="mn">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - монгол" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/mn.svg">
+              <span class="tl-label tl-name" for="монгол">монгол</span>
+            </li>
+            <li class="tl-option " data-value="ms">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - Melayu" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/my.svg">
+              <span class="tl-label tl-name" for="Melayu">Melayu</span>
+            </li>
+            <li class="tl-option " data-value="id">
+              <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown option country flag for language - Indonesia" src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/id.svg">
+              <span class="tl-label tl-name" for="Indonesia">Indonesia</span>
+            </li>
+          </ul>
+          <input type="hidden" name="country_code" value="IN">
+          <input type="hidden" name="language_code" value="en"></form>
+        </div>
+        <div class="tl-title">Currency</div>
+        <div class="tl-switcher tl-currency">
+          <div class="tl-select tl-currency-select">
+            
+            <img class="tl-flag" loading="lazy" width="20" height="18" alt="Dropdown selection country flag for currency" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+            
+            <span class="tl-label"></span>
+          </div>
+          <ul class="tl-options top-right" role="list"></ul>
+        </div>
+        <div class="tl-btn-container">
+          <button class="tl-submit-btn">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- END app snippet -->
+</script>
+
+<script type="lazyload_js">
+  if (!Array.prototype.find) {
+    Object.defineProperty(Array.prototype, 'find', {
+      value: function (predicate) {
+        if (this == null) {
+          throw TypeError('"this" is null or not defined');
+        }
+
+        const o = Object(this);
+        const len = o.length >>> 0;
+        if (typeof predicate !== 'function') {
+          throw TypeError('predicate must be a function');
+        }
+        const thisArg = arguments[1];
+
+        let k = 0;
+
+        while (k < len) {
+          const kValue = o[k];
+          if (predicate.call(thisArg, kValue, k, o)) {
+            return kValue;
+          }
+          k++;
+        }
+        return undefined;
+      },
+      configurable: true,
+      writable: true
+    });
+  }
+
+  (function () {
+    var enabledShopCurrenciesJson = '[{"name":"British Pound","iso_code":"GBP","symbol":"£"}]';
+    var availableCountriesJson = '[{"name":"Afghanistan","iso_code":"AF","currency_code":"GBP"},{"name":"Åland Islands","iso_code":"AX","currency_code":"GBP"},{"name":"Albania","iso_code":"AL","currency_code":"GBP"},{"name":"Algeria","iso_code":"DZ","currency_code":"GBP"},{"name":"Andorra","iso_code":"AD","currency_code":"GBP"},{"name":"Angola","iso_code":"AO","currency_code":"GBP"},{"name":"Anguilla","iso_code":"AI","currency_code":"GBP"},{"name":"Antigua &amp; Barbuda","iso_code":"AG","currency_code":"GBP"},{"name":"Argentina","iso_code":"AR","currency_code":"GBP"},{"name":"Armenia","iso_code":"AM","currency_code":"GBP"},{"name":"Aruba","iso_code":"AW","currency_code":"GBP"},{"name":"Ascension Island","iso_code":"AC","currency_code":"GBP"},{"name":"Australia","iso_code":"AU","currency_code":"GBP"},{"name":"Austria","iso_code":"AT","currency_code":"GBP"},{"name":"Azerbaijan","iso_code":"AZ","currency_code":"GBP"},{"name":"Bahamas","iso_code":"BS","currency_code":"GBP"},{"name":"Bahrain","iso_code":"BH","currency_code":"GBP"},{"name":"Bangladesh","iso_code":"BD","currency_code":"GBP"},{"name":"Barbados","iso_code":"BB","currency_code":"GBP"},{"name":"Belarus","iso_code":"BY","currency_code":"GBP"},{"name":"Belgium","iso_code":"BE","currency_code":"GBP"},{"name":"Belize","iso_code":"BZ","currency_code":"GBP"},{"name":"Benin","iso_code":"BJ","currency_code":"GBP"},{"name":"Bermuda","iso_code":"BM","currency_code":"GBP"},{"name":"Bhutan","iso_code":"BT","currency_code":"GBP"},{"name":"Bolivia","iso_code":"BO","currency_code":"GBP"},{"name":"Bosnia &amp; Herzegovina","iso_code":"BA","currency_code":"GBP"},{"name":"Botswana","iso_code":"BW","currency_code":"GBP"},{"name":"Brazil","iso_code":"BR","currency_code":"GBP"},{"name":"British Indian Ocean Territory","iso_code":"IO","currency_code":"GBP"},{"name":"British Virgin Islands","iso_code":"VG","currency_code":"GBP"},{"name":"Brunei","iso_code":"BN","currency_code":"GBP"},{"name":"Bulgaria","iso_code":"BG","currency_code":"GBP"},{"name":"Burkina Faso","iso_code":"BF","currency_code":"GBP"},{"name":"Burundi","iso_code":"BI","currency_code":"GBP"},{"name":"Cambodia","iso_code":"KH","currency_code":"GBP"},{"name":"Cameroon","iso_code":"CM","currency_code":"GBP"},{"name":"Canada","iso_code":"CA","currency_code":"GBP"},{"name":"Cape Verde","iso_code":"CV","currency_code":"GBP"},{"name":"Caribbean Netherlands","iso_code":"BQ","currency_code":"GBP"},{"name":"Cayman Islands","iso_code":"KY","currency_code":"GBP"},{"name":"Central African Republic","iso_code":"CF","currency_code":"GBP"},{"name":"Chad","iso_code":"TD","currency_code":"GBP"},{"name":"Chile","iso_code":"CL","currency_code":"GBP"},{"name":"China","iso_code":"CN","currency_code":"GBP"},{"name":"Christmas Island","iso_code":"CX","currency_code":"GBP"},{"name":"Cocos (Keeling) Islands","iso_code":"CC","currency_code":"GBP"},{"name":"Colombia","iso_code":"CO","currency_code":"GBP"},{"name":"Comoros","iso_code":"KM","currency_code":"GBP"},{"name":"Congo - Brazzaville","iso_code":"CG","currency_code":"GBP"},{"name":"Congo - Kinshasa","iso_code":"CD","currency_code":"GBP"},{"name":"Cook Islands","iso_code":"CK","currency_code":"GBP"},{"name":"Costa Rica","iso_code":"CR","currency_code":"GBP"},{"name":"Côte d’Ivoire","iso_code":"CI","currency_code":"GBP"},{"name":"Croatia","iso_code":"HR","currency_code":"GBP"},{"name":"Curaçao","iso_code":"CW","currency_code":"GBP"},{"name":"Cyprus","iso_code":"CY","currency_code":"GBP"},{"name":"Czechia","iso_code":"CZ","currency_code":"GBP"},{"name":"Denmark","iso_code":"DK","currency_code":"GBP"},{"name":"Djibouti","iso_code":"DJ","currency_code":"GBP"},{"name":"Dominica","iso_code":"DM","currency_code":"GBP"},{"name":"Dominican Republic","iso_code":"DO","currency_code":"GBP"},{"name":"Ecuador","iso_code":"EC","currency_code":"GBP"},{"name":"Egypt","iso_code":"EG","currency_code":"GBP"},{"name":"El Salvador","iso_code":"SV","currency_code":"GBP"},{"name":"Equatorial Guinea","iso_code":"GQ","currency_code":"GBP"},{"name":"Eritrea","iso_code":"ER","currency_code":"GBP"},{"name":"Estonia","iso_code":"EE","currency_code":"GBP"},{"name":"Eswatini","iso_code":"SZ","currency_code":"GBP"},{"name":"Ethiopia","iso_code":"ET","currency_code":"GBP"},{"name":"Falkland Islands","iso_code":"FK","currency_code":"GBP"},{"name":"Faroe Islands","iso_code":"FO","currency_code":"GBP"},{"name":"Fiji","iso_code":"FJ","currency_code":"GBP"},{"name":"Finland","iso_code":"FI","currency_code":"GBP"},{"name":"France","iso_code":"FR","currency_code":"GBP"},{"name":"French Guiana","iso_code":"GF","currency_code":"GBP"},{"name":"French Polynesia","iso_code":"PF","currency_code":"GBP"},{"name":"French Southern Territories","iso_code":"TF","currency_code":"GBP"},{"name":"Gabon","iso_code":"GA","currency_code":"GBP"},{"name":"Gambia","iso_code":"GM","currency_code":"GBP"},{"name":"Georgia","iso_code":"GE","currency_code":"GBP"},{"name":"Germany","iso_code":"DE","currency_code":"GBP"},{"name":"Ghana","iso_code":"GH","currency_code":"GBP"},{"name":"Gibraltar","iso_code":"GI","currency_code":"GBP"},{"name":"Greece","iso_code":"GR","currency_code":"GBP"},{"name":"Greenland","iso_code":"GL","currency_code":"GBP"},{"name":"Grenada","iso_code":"GD","currency_code":"GBP"},{"name":"Guadeloupe","iso_code":"GP","currency_code":"GBP"},{"name":"Guatemala","iso_code":"GT","currency_code":"GBP"},{"name":"Guernsey","iso_code":"GG","currency_code":"GBP"},{"name":"Guinea","iso_code":"GN","currency_code":"GBP"},{"name":"Guinea-Bissau","iso_code":"GW","currency_code":"GBP"},{"name":"Guyana","iso_code":"GY","currency_code":"GBP"},{"name":"Haiti","iso_code":"HT","currency_code":"GBP"},{"name":"Honduras","iso_code":"HN","currency_code":"GBP"},{"name":"Hong Kong SAR","iso_code":"HK","currency_code":"GBP"},{"name":"Hungary","iso_code":"HU","currency_code":"GBP"},{"name":"Iceland","iso_code":"IS","currency_code":"GBP"},{"name":"India","iso_code":"IN","currency_code":"GBP"},{"name":"Indonesia","iso_code":"ID","currency_code":"GBP"},{"name":"Iraq","iso_code":"IQ","currency_code":"GBP"},{"name":"Ireland","iso_code":"IE","currency_code":"GBP"},{"name":"Isle of Man","iso_code":"IM","currency_code":"GBP"},{"name":"Israel","iso_code":"IL","currency_code":"GBP"},{"name":"Italy","iso_code":"IT","currency_code":"GBP"},{"name":"Jamaica","iso_code":"JM","currency_code":"GBP"},{"name":"Japan","iso_code":"JP","currency_code":"GBP"},{"name":"Jersey","iso_code":"JE","currency_code":"GBP"},{"name":"Jordan","iso_code":"JO","currency_code":"GBP"},{"name":"Kazakhstan","iso_code":"KZ","currency_code":"GBP"},{"name":"Kenya","iso_code":"KE","currency_code":"GBP"},{"name":"Kiribati","iso_code":"KI","currency_code":"GBP"},{"name":"Kosovo","iso_code":"XK","currency_code":"GBP"},{"name":"Kuwait","iso_code":"KW","currency_code":"GBP"},{"name":"Kyrgyzstan","iso_code":"KG","currency_code":"GBP"},{"name":"Laos","iso_code":"LA","currency_code":"GBP"},{"name":"Latvia","iso_code":"LV","currency_code":"GBP"},{"name":"Lebanon","iso_code":"LB","currency_code":"GBP"},{"name":"Lesotho","iso_code":"LS","currency_code":"GBP"},{"name":"Liberia","iso_code":"LR","currency_code":"GBP"},{"name":"Libya","iso_code":"LY","currency_code":"GBP"},{"name":"Liechtenstein","iso_code":"LI","currency_code":"GBP"},{"name":"Lithuania","iso_code":"LT","currency_code":"GBP"},{"name":"Luxembourg","iso_code":"LU","currency_code":"GBP"},{"name":"Macao SAR","iso_code":"MO","currency_code":"GBP"},{"name":"Madagascar","iso_code":"MG","currency_code":"GBP"},{"name":"Malawi","iso_code":"MW","currency_code":"GBP"},{"name":"Malaysia","iso_code":"MY","currency_code":"GBP"},{"name":"Maldives","iso_code":"MV","currency_code":"GBP"},{"name":"Mali","iso_code":"ML","currency_code":"GBP"},{"name":"Malta","iso_code":"MT","currency_code":"GBP"},{"name":"Martinique","iso_code":"MQ","currency_code":"GBP"},{"name":"Mauritania","iso_code":"MR","currency_code":"GBP"},{"name":"Mauritius","iso_code":"MU","currency_code":"GBP"},{"name":"Mayotte","iso_code":"YT","currency_code":"GBP"},{"name":"Mexico","iso_code":"MX","currency_code":"GBP"},{"name":"Moldova","iso_code":"MD","currency_code":"GBP"},{"name":"Monaco","iso_code":"MC","currency_code":"GBP"},{"name":"Mongolia","iso_code":"MN","currency_code":"GBP"},{"name":"Montenegro","iso_code":"ME","currency_code":"GBP"},{"name":"Montserrat","iso_code":"MS","currency_code":"GBP"},{"name":"Morocco","iso_code":"MA","currency_code":"GBP"},{"name":"Mozambique","iso_code":"MZ","currency_code":"GBP"},{"name":"Myanmar (Burma)","iso_code":"MM","currency_code":"GBP"},{"name":"Namibia","iso_code":"NA","currency_code":"GBP"},{"name":"Nauru","iso_code":"NR","currency_code":"GBP"},{"name":"Nepal","iso_code":"NP","currency_code":"GBP"},{"name":"Netherlands","iso_code":"NL","currency_code":"GBP"},{"name":"New Caledonia","iso_code":"NC","currency_code":"GBP"},{"name":"New Zealand","iso_code":"NZ","currency_code":"GBP"},{"name":"Nicaragua","iso_code":"NI","currency_code":"GBP"},{"name":"Niger","iso_code":"NE","currency_code":"GBP"},{"name":"Nigeria","iso_code":"NG","currency_code":"GBP"},{"name":"Niue","iso_code":"NU","currency_code":"GBP"},{"name":"Norfolk Island","iso_code":"NF","currency_code":"GBP"},{"name":"North Macedonia","iso_code":"MK","currency_code":"GBP"},{"name":"Norway","iso_code":"NO","currency_code":"GBP"},{"name":"Oman","iso_code":"OM","currency_code":"GBP"},{"name":"Pakistan","iso_code":"PK","currency_code":"GBP"},{"name":"Palestinian Territories","iso_code":"PS","currency_code":"GBP"},{"name":"Panama","iso_code":"PA","currency_code":"GBP"},{"name":"Papua New Guinea","iso_code":"PG","currency_code":"GBP"},{"name":"Paraguay","iso_code":"PY","currency_code":"GBP"},{"name":"Peru","iso_code":"PE","currency_code":"GBP"},{"name":"Philippines","iso_code":"PH","currency_code":"GBP"},{"name":"Pitcairn Islands","iso_code":"PN","currency_code":"GBP"},{"name":"Poland","iso_code":"PL","currency_code":"GBP"},{"name":"Portugal","iso_code":"PT","currency_code":"GBP"},{"name":"Qatar","iso_code":"QA","currency_code":"GBP"},{"name":"Réunion","iso_code":"RE","currency_code":"GBP"},{"name":"Romania","iso_code":"RO","currency_code":"GBP"},{"name":"Russia","iso_code":"RU","currency_code":"GBP"},{"name":"Rwanda","iso_code":"RW","currency_code":"GBP"},{"name":"Samoa","iso_code":"WS","currency_code":"GBP"},{"name":"San Marino","iso_code":"SM","currency_code":"GBP"},{"name":"São Tomé &amp; Príncipe","iso_code":"ST","currency_code":"GBP"},{"name":"Saudi Arabia","iso_code":"SA","currency_code":"GBP"},{"name":"Senegal","iso_code":"SN","currency_code":"GBP"},{"name":"Serbia","iso_code":"RS","currency_code":"GBP"},{"name":"Seychelles","iso_code":"SC","currency_code":"GBP"},{"name":"Sierra Leone","iso_code":"SL","currency_code":"GBP"},{"name":"Singapore","iso_code":"SG","currency_code":"GBP"},{"name":"Sint Maarten","iso_code":"SX","currency_code":"GBP"},{"name":"Slovakia","iso_code":"SK","currency_code":"GBP"},{"name":"Slovenia","iso_code":"SI","currency_code":"GBP"},{"name":"Solomon Islands","iso_code":"SB","currency_code":"GBP"},{"name":"Somalia","iso_code":"SO","currency_code":"GBP"},{"name":"South Africa","iso_code":"ZA","currency_code":"GBP"},{"name":"South Georgia &amp; South Sandwich Islands","iso_code":"GS","currency_code":"GBP"},{"name":"South Korea","iso_code":"KR","currency_code":"GBP"},{"name":"South Sudan","iso_code":"SS","currency_code":"GBP"},{"name":"Spain","iso_code":"ES","currency_code":"GBP"},{"name":"Sri Lanka","iso_code":"LK","currency_code":"GBP"},{"name":"St. Barthélemy","iso_code":"BL","currency_code":"GBP"},{"name":"St. Helena","iso_code":"SH","currency_code":"GBP"},{"name":"St. Kitts &amp; Nevis","iso_code":"KN","currency_code":"GBP"},{"name":"St. Lucia","iso_code":"LC","currency_code":"GBP"},{"name":"St. Martin","iso_code":"MF","currency_code":"GBP"},{"name":"St. Pierre &amp; Miquelon","iso_code":"PM","currency_code":"GBP"},{"name":"St. Vincent &amp; Grenadines","iso_code":"VC","currency_code":"GBP"},{"name":"Sudan","iso_code":"SD","currency_code":"GBP"},{"name":"Suriname","iso_code":"SR","currency_code":"GBP"},{"name":"Svalbard &amp; Jan Mayen","iso_code":"SJ","currency_code":"GBP"},{"name":"Sweden","iso_code":"SE","currency_code":"GBP"},{"name":"Switzerland","iso_code":"CH","currency_code":"GBP"},{"name":"Taiwan","iso_code":"TW","currency_code":"GBP"},{"name":"Tajikistan","iso_code":"TJ","currency_code":"GBP"},{"name":"Tanzania","iso_code":"TZ","currency_code":"GBP"},{"name":"Thailand","iso_code":"TH","currency_code":"GBP"},{"name":"Timor-Leste","iso_code":"TL","currency_code":"GBP"},{"name":"Togo","iso_code":"TG","currency_code":"GBP"},{"name":"Tokelau","iso_code":"TK","currency_code":"GBP"},{"name":"Tonga","iso_code":"TO","currency_code":"GBP"},{"name":"Trinidad &amp; Tobago","iso_code":"TT","currency_code":"GBP"},{"name":"Tristan da Cunha","iso_code":"TA","currency_code":"GBP"},{"name":"Tunisia","iso_code":"TN","currency_code":"GBP"},{"name":"Türkiye","iso_code":"TR","currency_code":"GBP"},{"name":"Turkmenistan","iso_code":"TM","currency_code":"GBP"},{"name":"Turks &amp; Caicos Islands","iso_code":"TC","currency_code":"GBP"},{"name":"Tuvalu","iso_code":"TV","currency_code":"GBP"},{"name":"U.S. Outlying Islands","iso_code":"UM","currency_code":"GBP"},{"name":"Uganda","iso_code":"UG","currency_code":"GBP"},{"name":"Ukraine","iso_code":"UA","currency_code":"GBP"},{"name":"United Arab Emirates","iso_code":"AE","currency_code":"GBP"},{"name":"United Kingdom","iso_code":"GB","currency_code":"GBP"},{"name":"United States","iso_code":"US","currency_code":"GBP"},{"name":"Uruguay","iso_code":"UY","currency_code":"GBP"},{"name":"Uzbekistan","iso_code":"UZ","currency_code":"GBP"},{"name":"Vanuatu","iso_code":"VU","currency_code":"GBP"},{"name":"Vatican City","iso_code":"VA","currency_code":"GBP"},{"name":"Venezuela","iso_code":"VE","currency_code":"GBP"},{"name":"Vietnam","iso_code":"VN","currency_code":"GBP"},{"name":"Wallis &amp; Futuna","iso_code":"WF","currency_code":"GBP"},{"name":"Western Sahara","iso_code":"EH","currency_code":"GBP"},{"name":"Yemen","iso_code":"YE","currency_code":"GBP"},{"name":"Zambia","iso_code":"ZM","currency_code":"GBP"},{"name":"Zimbabwe","iso_code":"ZW","currency_code":"GBP"}]';
+
+    if (typeof window.TranslationLab === 'undefined') {
+      window.TranslationLab = {};
+    }
+  
+    window.TranslationLab.CurrencySettings = {
+      themeMoneyFormat: "\u003cspan class=\"tlab-currency-format\"\u003e£{{amount}}\u003c\/span\u003e",
+      themeMoneyWithCurrencyFormat: "\u003cspan class=\"tlab-currency-format\"\u003e£{{amount}} GBP\u003c\/span\u003e",
+      format: 'money_with_currency_format',
+      isRtl: false
+    };
+    
+    window.TranslationLab.switcherSettings = {
+      switcherMode: 'language_and_custom_currency',
+      labelType: 'language-name',
+      showFlags: true,
+      imgFileTemplate: 'https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/[country-code].svg',
+
+      isModal: false,
+      
+      currencyFormatClass: 'span.tlab-currency-format, .price-item, .price, .price-sale, .price-compare, span.money',
+      shopCurrencyCode: "GBP" || "GBP",
+
+      langCurrencies: [{"languageCode":"ar","currencies":[{"code":"USD"},{"code":"GBP"}]},{"languageCode":"de","currencies":[{"code":"USD"},{"code":"GBP"}]},{"languageCode":"en","currencies":[{"code":"GBP"},{"code":"USD"}]},{"languageCode":"es","currencies":[{"code":"USD"},{"code":"GBP"}]},{"languageCode":"fa","currencies":[{"code":"USD"},{"code":"GBP"}]},{"languageCode":"fr","currencies":[{"code":"USD"},{"code":"GBP"}]},{"languageCode":"hi","currencies":[{"code":"USD"},{"code":"GBP"}]},{"languageCode":"id","currencies":[{"code":"USD"},{"code":"GBP"}]},{"languageCode":"it","currencies":[{"code":"USD"},{"code":"GBP"}]},{"languageCode":"ja","currencies":[{"code":"USD"},{"code":"GBP"}]},{"languageCode":"ko","currencies":[{"code":"USD"}]},{"languageCode":"mn","currencies":[{"code":"USD"},{"code":"GBP"}]},{"languageCode":"ms","currencies":[{"code":"USD"},{"code":"GBP"}]},{"languageCode":"pl","currencies":[{"code":"USD"},{"code":"GBP"}]},{"languageCode":"pt-PT","currencies":[{"code":"USD"},{"code":"GBP"}]},{"languageCode":"ru","currencies":[{"code":"USD"},{"code":"GBP"}]},{"languageCode":"th","currencies":[{"code":"USD"},{"code":"GBP"}]},{"languageCode":"tr","currencies":[{"code":"USD"},{"code":"GBP"}]},{"languageCode":"vi","currencies":[{"code":"USD"},{"code":"GBP"}]},{"languageCode":"zh-CN","currencies":[{"code":"USD"},{"code":"GBP"}]}],
+      
+      currentLocale: 'en',
+      languageList: JSON.parse("[{\r\n\"name\": \"English\",\r\n\"endonym_name\": \"English\",\r\n\"iso_code\": \"en\",\r\n\"display_code\": \"en\",\r\n\"primary\": true,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/gb.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/\"\r\n},{\r\n\"name\": \"Chinese\",\r\n\"endonym_name\": \"简体中文\",\r\n\"iso_code\": \"zh-CN\",\r\n\"display_code\": \"zh-CN\",\r\n\"primary\": false,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/cn.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/zh\"\r\n},{\r\n\"name\": \"Arabic\",\r\n\"endonym_name\": \"العربية\",\r\n\"iso_code\": \"ar\",\r\n\"display_code\": \"ar\",\r\n\"primary\": false,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/sa.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/ar\"\r\n},{\r\n\"name\": \"French\",\r\n\"endonym_name\": \"français\",\r\n\"iso_code\": \"fr\",\r\n\"display_code\": \"fr\",\r\n\"primary\": false,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/fr.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/fr\"\r\n},{\r\n\"name\": \"Italian\",\r\n\"endonym_name\": \"Italiano\",\r\n\"iso_code\": \"it\",\r\n\"display_code\": \"it\",\r\n\"primary\": false,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/it.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/it\"\r\n},{\r\n\"name\": \"German\",\r\n\"endonym_name\": \"Deutsch\",\r\n\"iso_code\": \"de\",\r\n\"display_code\": \"de\",\r\n\"primary\": false,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/de.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/de\"\r\n},{\r\n\"name\": \"Japanese\",\r\n\"endonym_name\": \"日本語\",\r\n\"iso_code\": \"ja\",\r\n\"display_code\": \"ja\",\r\n\"primary\": false,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/jp.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/ja\"\r\n},{\r\n\"name\": \"Persian\",\r\n\"endonym_name\": \"فارسی\",\r\n\"iso_code\": \"fa\",\r\n\"display_code\": \"fa\",\r\n\"primary\": false,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/ir.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/fa\"\r\n},{\r\n\"name\": \"Portuguese\",\r\n\"endonym_name\": \"português\",\r\n\"iso_code\": \"pt-PT\",\r\n\"display_code\": \"pt-PT\",\r\n\"primary\": false,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/pt.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/pt\"\r\n},{\r\n\"name\": \"Russian\",\r\n\"endonym_name\": \"русский\",\r\n\"iso_code\": \"ru\",\r\n\"display_code\": \"ru\",\r\n\"primary\": false,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/ru.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/ru\"\r\n},{\r\n\"name\": \"Spanish\",\r\n\"endonym_name\": \"Español\",\r\n\"iso_code\": \"es\",\r\n\"display_code\": \"es\",\r\n\"primary\": false,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/es.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/es\"\r\n},{\r\n\"name\": \"Turkish\",\r\n\"endonym_name\": \"Türkçe\",\r\n\"iso_code\": \"tr\",\r\n\"display_code\": \"tr\",\r\n\"primary\": false,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/tr.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/tr\"\r\n},{\r\n\"name\": \"Thai\",\r\n\"endonym_name\": \"ภาษาไทย\",\r\n\"iso_code\": \"th\",\r\n\"display_code\": \"th\",\r\n\"primary\": false,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/th.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/th\"\r\n},{\r\n\"name\": \"Vietnamese\",\r\n\"endonym_name\": \"Tiếng Việt\",\r\n\"iso_code\": \"vi\",\r\n\"display_code\": \"vi\",\r\n\"primary\": false,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/vn.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/vi\"\r\n},{\r\n\"name\": \"Hindi\",\r\n\"endonym_name\": \"हिन्दी\",\r\n\"iso_code\": \"hi\",\r\n\"display_code\": \"hi\",\r\n\"primary\": false,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/in.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/hi\"\r\n},{\r\n\"name\": \"Polish\",\r\n\"endonym_name\": \"Polski\",\r\n\"iso_code\": \"pl\",\r\n\"display_code\": \"pl\",\r\n\"primary\": false,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/pl.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/pl\"\r\n},{\r\n\"name\": \"Mongolian\",\r\n\"endonym_name\": \"монгол\",\r\n\"iso_code\": \"mn\",\r\n\"display_code\": \"mn\",\r\n\"primary\": false,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/mn.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/mn\"\r\n},{\r\n\"name\": \"Malay\",\r\n\"endonym_name\": \"Melayu\",\r\n\"iso_code\": \"ms\",\r\n\"display_code\": \"ms\",\r\n\"primary\": false,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/my.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/ms\"\r\n},{\r\n\"name\": \"Indonesian\",\r\n\"endonym_name\": \"Indonesia\",\r\n\"iso_code\": \"id\",\r\n\"display_code\": \"id\",\r\n\"primary\": false,\"flag\": \"https:\/\/cdn.shopify.com\/extensions\/813ddcf1-e981-4d88-a825-e0f9799134c9\/t-lab-ai-language-translate-133\/assets\/id.svg\",\r\n\"domain\": null,\r\n\"region\": null,\r\n\"regions\": null,\r\n\"root_url\": \"\\\/id\"\r\n}]"),
+
+      currentCountry: 'IN',
+      availableCountries: JSON.parse(availableCountriesJson),
+
+      enabledShopCurrencies: JSON.parse(enabledShopCurrenciesJson),
+
+      addNoRedirect: false,
+      addLanguageCode: false,
+    };
+
+    var shopifyThemeName = null;
+
+    if (window.Shopify && window.Shopify.theme && window.Shopify.theme.name) {
+      shopifyThemeName = window.Shopify.theme.name.toLowerCase();
+    }
+
+    function getCurrenciesForLanguage(languageCode, languageCurrencies, defaultCurrencyCode) {
+      if (!languageCode || !languageCurrencies) {
+        return {
+          languageCode: '',
+          currencies: [{ code: defaultCurrencyCode }]
+        };
+      }
+      const langCodePart = languageCode.split('-')[0];
+      const langCurrencyMapping = languageCurrencies.find((x) => x.languageCode === languageCode || x.languageCode === langCodePart);
+      const defaultCurrenciesForLanguage = {
+        languageCode: languageCode,
+        currencies: [{ code: defaultCurrencyCode }]
+      };
+      return langCurrencyMapping ?? defaultCurrenciesForLanguage;
+    }
+
+    function findCurrencyForLanguage(langCurrencies, languageCode, currencyCode, defaultCurrencyCode) {
+      if (!languageCode) return null
+      const langCurrencyMapping = getCurrenciesForLanguage(languageCode, langCurrencies, defaultCurrencyCode);
+      if (!currencyCode)  return langCurrencyMapping.currencies[0];
+      const currency = langCurrencyMapping.currencies.find((currency) => currency.code === currencyCode);
+      if (!currency) return langCurrencyMapping.currencies[0];
+      return currency;
+    }
+
+    function getCurrentCurrencyCode(languageCurrencies, language, shopCurrencyCode) {
+      const savedCurrencyCode = window.TranslationLab.currencyCookie.read() ?? null;
+      const currencyForCurrentLanguage = findCurrencyForLanguage(languageCurrencies, language.iso_code, savedCurrencyCode, shopCurrencyCode);
+      return currencyForCurrentLanguage ? currencyForCurrentLanguage.code : shopCurrencyCode;
+    }
+
+    window.TranslationLab.currencyCookie = {
+        name: 'translation-lab-currency',
+        write: function (currency) {
+            window.localStorage.setItem(this.name, currency);
+        },
+        read: function () {
+            return window.localStorage.getItem(this.name);
+        },
+        destroy: function () {
+            window.localStorage.removeItem(this.name);
+        }
+    }
+
+    window.TranslationLab.currencyService = {
+      getCurrenciesForLanguage,
+      findCurrencyForLanguage,
+      getCurrentCurrencyCode
+    }
+
+    var switcherPositionOptions = {
+      shopifyThemeName: shopifyThemeName,
+      switcherPrototypeSelector: '.tl-switcher-container.hidden',
+      switcherPosition: 'custom',
+      headerRefElement: '',
+      headerRelativePosition: 'before',
+      mobileRefElement: '',
+      mobileRelativePosition: 'in-element-prepend',
+    };
+
+    function waitForElements(t,i,e=0){var n=t.map(function(e){return document.querySelector(e)});if(n.every(function(e){return!!e})){i(n)}else{var r=function(e,n){var r=t.map(function(e){return document.querySelector(e)});if(r.every(function(e){return!!e})){n.disconnect();i(r)}};var c=new MutationObserver(r);var a={childList:true,subtree:true};c.observe(document.documentElement,a);if(e>0){setTimeout(function(){c.disconnect()},e)}}}var configureSwitcherOnReady=function(o,l){return function(e){var n=e[0];var r=e[1];var t=n.cloneNode(true);var i=false;switch(l){case"before":{r.parentElement.appendChild(t);r.parentElement.insertBefore(t,r);i=true;break}case"after":{r.parentElement.appendChild(t);if(r.nextSibling){r.parentElement.insertBefore(t,r.nextSibling)}i=true;break}case"in-element-prepend":{r.appendChild(t);if(r.childNodes.length>0){r.insertBefore(t,r.childNodes[0])}i=true;break}case"in-element":{r.appendChild(t);i=true;break}}if(i){t.classList.add(o);t.classList.remove("hidden");var c="tlSwitcherReady";var a=new CustomEvent(c,{detail:{switcherElement:t}});document.dispatchEvent(a)}}};function configureHeaderSwitchers(e,r,n,t,i,c){var a={dawn:{headerReferenceElement:".header__icon.header__icon--cart",mobileMenuReferenceElement:"ul.mobile-nav > :nth-child(1)"},studio:{headerReferenceElement:".header__icon.header__icon--cart",mobileMenuReferenceElement:"ul.mobile-nav > :nth-child(1)"},refresh:{headerReferenceElement:".header__icon.header__icon--cart",mobileMenuReferenceElement:"ul.mobile-nav > :nth-child(1)"},ride:{headerReferenceElement:".header__icon.header__icon--cart",mobileMenuReferenceElement:"ul.mobile-nav > :nth-child(1)"},colorblock:{headerReferenceElement:".header__icon.header__icon--cart",mobileMenuReferenceElement:"ul.mobile-nav > :nth-child(1)"},taste:{headerReferenceElement:".header__icon.header__icon--cart",mobileMenuReferenceElement:"ul.mobile-nav > :nth-child(1)"},craft:{headerReferenceElement:".header__icon.header__icon--cart",mobileMenuReferenceElement:"ul.mobile-nav > :nth-child(1)"},crave:{headerReferenceElement:".header__icon.header__icon--cart",mobileMenuReferenceElement:"ul.mobile-nav > :nth-child(1)"},sense:{headerReferenceElement:".header__icon.header__icon--cart",mobileMenuReferenceElement:"ul.mobile-nav > :nth-child(1)"}};var o=a[e]?a[e].headerReferenceElement:null;var l=a[e]?a[e].mobileMenuReferenceElement:null;var d=n?n:o;if(d){var h=d.split(",");h.forEach(e=>{var n=[r,e];waitForElements(n,configureSwitcherOnReady("desktop",t),3e3)})}var m=i?i:l;if(m){var u=m.split(",");u.forEach(e=>{var n=[r,e];waitForElements(n,configureSwitcherOnReady("mobile",c))})}}function configureCustomPositionSwitcher(e){var n=document.querySelector(e);if(!n){return}n.classList.add("tl-custom-position");n.classList.remove("hidden");var r="tlSwitcherReady";var t=new CustomEvent(r,{detail:{switcherElement:n}});document.dispatchEvent(t)}function configureSwitcherPosition(e){switch(e.switcherPosition){case"header":{configureHeaderSwitchers(e.shopifyThemeName,e.switcherPrototypeSelector,e.headerRefElement,e.headerRelativePosition,e.mobileRefElement,e.mobileRelativePosition);break}case"custom":{configureCustomPositionSwitcher(e.switcherPrototypeSelector);break}}}
+
+    waitForElements(['body'], (elements) => {
+      var template = document.getElementById('tl-switcher-template');
+      if (template) {
+        var tempDiv = document.createElement('div');
+        tempDiv.innerHTML = template.innerHTML;
+        var innerDiv = tempDiv.querySelector('.tl-switcher-container');
+        if (innerDiv) {
+          var clone = innerDiv.cloneNode(true);
+          elements[0].appendChild(clone);
+        }
+      }
+      configureSwitcherPosition(switcherPositionOptions);
+    });
+    
+  })();
+</script>
+
+<script type="lazyload_js" data-src="/services/javascripts/currencies.js"></script>
+<script type="lazyload_js" data-src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/advanced-switcher-currency.js"></script>
+<script type="lazyload_js" data-src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/advanced-currency-monitor.js"></script>
+
+<script type="lazyload_js" data-src="https://cdn.shopify.com/extensions/813ddcf1-e981-4d88-a825-e0f9799134c9/t-lab-ai-language-translate-133/assets/advanced-switcher.js"></script>
+
+<!-- END app app block -->
+
+<!-- BEGIN app block: shopify://apps/searchpie-seo-speed/blocks/sb-snippets/29f6c508-9bb9-4e93-9f98-b637b62f3552 -->
+<!-- SearchPie snippets -->
+<!-- BEGIN app snippet: Secomapp-Instant-Page -->
+  <script type="lazyload_js">
+      var timeout = 2000;
+      (function (w, d, s) {
+          function asyncLoad_isp() {
+              setTimeout(function () {
+                  var head = document.head;
+                  var r = document.createElement('script');
+                  r.type = "module";
+                  r.integrity = "sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq";
+                  r.src = "//instant.page/5.1.1";
+                  r.defer = true;
+                  head.appendChild(r);
+              }, timeout);
+          };
+          document.addEventListener('DOMContentLoaded', function (event) {
+              asyncLoad_isp();
+          });
+      })(window, document, 'script');
+  </script>
+  <!-- END app snippet -->
+  <!-- BEGIN app snippet: Secomapp-Store --><!-- seo-booster-json-ld-store -->
+
+  <!-- seo-booster-website -->
+  <script type="application/ld+json">
+  {
+     "@context": "http://schema.org",
+     "@type": "WebSite",
+     
+     "name" : "Celmade",
+     
+     "url": "https://celmade.com/",
+     "potentialAction": {
+       "@type": "SearchAction",
+       "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://celmade.com/search?q={search_term_string}"
+        },
+       "query-input": "required name=search_term_string"
+     }
+  }
+  
+  </script>
+  <!-- end-seo-booster-website -->
+
+  <!-- seo-booster-organization -->
+  <script type="application/ld+json">
+  {
+  	"@context": "http://schema.org",
+  	"@type": "Organization",
+      
+      "name" : "Celmade",
+      
+  	"url": "https://celmade.com","logo": "https://sb.secomapp.com/images/artwork/sb_logo_79567.png","description": "We are a Korean Anti Aging Injections company specializing in the field of dermal fillers, face, cherry lip, nose, under eye, cheek, wrinkle and chin. Order Now","address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dunton Way",
+        "addressLocality": "Dagenham",
+        "addressCountry":  "GB",
+        "addressRegion": "England",
+        "postalCode": "RM9 6GP"
+      }
+  , "sameAs" : [
+  
+  "https://celmade.com/"
+      
+  ]}
+  
+  </script>
+
+<!-- End - seo-booster-json-ld-store -->
+<!-- END app snippet -->
+<!-- BEGIN app snippet: Secomapp-Breadcrumb -->
+<!-- seo-booster-json-ld-Breadcrumb -->
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+                "@type": "Website",
+                "@id": "https://celmade.com",
+                "name": "Celmade"
+            }
+        }]
+ }
+</script>
+<!-- END app snippet -->
+<!-- BEGIN app snippet: Secomapp-Carousel -->
+<!-- seo-booster-json-ld-carousel -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"ItemList",
+      "itemListElement":[{
+          "@type":"ListItem",
+          "position": 1,
+          "item": {
+            "name": "Mesotherapy",
+            "url": "https://celmade.com/collections/mesotherapy-injections"
+            }
+          },{
+          "@type":"ListItem",
+          "position": 2,
+          "item": {
+            "name": "Skin Boosters",
+            "url": "https://celmade.com/collections/skin-booster-injection"
+            }
+          },{
+          "@type":"ListItem",
+          "position": 3,
+          "item": {
+            "name": "Fillers",
+            "url": "https://celmade.com/collections/filler-face"
+            }
+          },{
+          "@type":"ListItem",
+          "position": 4,
+          "item": {
+            "name": "Botilinum Toxins",
+            "url": "https://celmade.com/collections/botulinum-toxins"
+            }
+          }
+      ]
+    }
+</script>
+<!-- end-seo-booster-json-ld-carousel -->
+
+<!-- END app snippet --><!-- BEGIN app snippet: Secomapp-FAQ --><!--  --><!-- / -->
+
+<!-- END app snippet --><!-- BEGIN app snippet: Secomapp-Product --><!-- END app snippet --><!-- BEGIN app snippet: Secomapp-Collection -->
+<!-- END app snippet --><!-- BEGIN app snippet: Secomapp-Blog --><!-- END app snippet --><!-- BEGIN app snippet: sb-detect-broken-link -->
+<script></script>
+<!-- END app snippet -->
+<!-- BEGIN app snippet: internal-link -->
+
+<script></script>
+<!-- END app snippet -->
+<!-- END SearchPie snippets -->
+<!-- END app app block -->

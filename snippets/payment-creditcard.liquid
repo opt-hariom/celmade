@@ -1,0 +1,15 @@
+<div class="celmade_payment_ccwrapper">
+  <h5 class="celmade_payment_title">Credit Card Payment</h5>
+  <p class="credit-card-notice">{{ settings.payment_credit_card_notice }}</p>
+    <div class="user-cc-save">
+      <ul>
+        <li>In Russia, only credit cards are accepted by Koronapay.</li>
+      </ul>
+    </div>
+</div>
+{% style %}
+  .credit-card-notice {
+    color: {{ settings.payment_cc_notice_color }};
+    font-weight: 600;
+  }
+{% endstyle %}

@@ -1,0 +1,125 @@
+
+<div class="container strongly-spaced-row blog-row" data-section-type="featured-blog">
+  <h2 class="hometitle h4-style align-center"><a href="{{ blog.url }}" data-cc-animate>{{ section.settings.title | escape }}</a></h2>
+  {% for block in section.blocks %}
+    <div class="article-list article-layout--columns article-layout--one-row">
+      <div class="article" data-cc-animate data-cc-animate-delay="{{ forloop.index | times: 0.15 }}s">
+        <div class="article__inner">
+          {% if article.image %}
+            <div class="article-image">
+              <a href="{{ article.url }}">
+                {%- render 'responsive-image', image: article.image, aspect_ratio: block.settings.crop_ratio, cover: true -%}
+              </a>
+            </div>
+          {% endif %}
+          <h3><a href="{{ article.url }}">{{ article.title | escape }}</a></h3>
+          {%- if block.settings.show_excerpts -%}
+            <div class="rte">
+              {%- if article.excerpt.size > 0 -%}
+                {{ article.excerpt }}
+              {%- else -%}
+                {{ article.content | strip_html | truncatewords: 30 }}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+
+          <div class="meta">
+            <span class="iconmeta time">
+              {% if block.settings.show_date %}
+                {{ article.published_at | date: format: 'month_date_year' }}
+              {% endif %}
+              {% if block.settings.show_author %}
+                {% if block.settings.show_date %}&mdash;{% endif %}
+                <span class="author">{{ article.author }}</span>
+              {% endif %}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+
+{% schema %}
+  {
+    "name": "Celmade Blog",
+    "class": "section-featured-blog",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Featured Blog"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "article",
+        "name": "Blog post",
+        "settings": [
+          {
+            "type": "article",
+            "id": "blog",
+            "label": "Blog post",
+            "info": "Select a blog post"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_author",
+            "label": "Show author",
+            "default": true
+          },
+	      {
+            "type": "checkbox",
+            "id": "show_date",
+            "label": "Show date",
+            "default": true
+          },
+	      {
+            "type": "checkbox",
+            "id": "show_excerpts",
+            "label": "Show excerpt",
+            "info": "Change excerpts by editing your blog posts. [Learn more](https:\/\/help.shopify.com\/en\/manual\/online-store\/blogs\/writing-blogs#display-an-excerpt-from-a-blog-post)",
+            "default": true
+          },
+          {
+            "type": "select",
+            "id": "crop_ratio",
+            "label": "Image size",
+            "options": [
+              {
+                "value": "",
+                "label": "Natural (no crop)"
+              },
+              {
+                "value": "0.67",
+                "label": "Portrait (2:3)"
+              },
+              {
+                "value": "1.0",
+                "label": "Square (1:1)"
+              },
+              {
+                "value": "1.33",
+                "label": "Landscape (4:3)"
+              },
+              {
+                "value": "1.78",
+                "label": "Wide (16:9)"
+              }
+            ],
+            "default": "1.78"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Celmade Blog",
+        "settings": {
+        }
+      }
+    ]
+  }
+{% endschema %}

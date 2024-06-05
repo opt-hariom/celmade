@@ -1,0 +1,213 @@
+<div id="template" class="small-form Celmade_add_address" data-cc-animate>
+  <div id="customer">
+	  <!-- Create Customer Address -->
+	  <div id="create-customer">
+	    <div class="template_header">
+          {% if customer.id == null %}
+          <h2 class="title">Step 1. {{ 'customer.register.title' | t }}</h2>
+          {% else %}
+	      <h2 class="title">Step 2. Add an address</h2>
+          {% endif %}
+	    </div>
+        {% if customer.id == null %}
+	    {% form 'create_customer' %}
+	      {{ form.errors | default_errors }}
+
+	      <div class="input-row">
+	        <label for="first_name" class="login">{{ 'customer.register.first_name' | t }}</label>
+	        <input type="text" value="" name="customer[first_name]" id="first_name" class="large" size="30" />
+	      </div>
+
+	      <div class="input-row">
+	        <label for="last_name" class="login">{{ 'customer.register.last_name' | t }}</label>
+	        <input type="text" value="" name="customer[last_name]" id="last_name" class="large" size="30" />
+	      </div>
+
+	      <div class="input-row">
+	        <label for="email" class="login">{{ 'customer.register.email' | t }}</label>
+	        <input type="email" value="" name="customer[email]" id="email" class="large" size="30" />
+	      </div>
+
+	      <div class="input-row">
+	        <label for="password" class="login">{{ 'customer.register.password' | t }}</label>
+	        <input type="password" value="" name="customer[password]" id="password" class="large password" size="30" />
+	      </div>
+        
+          <input type="hidden" name="return_to" value="/pages/register" /><br />
+          <label for="marketing_opt_in">
+            <input type="checkbox" onclick="toggle(this);" /> Agree to all Celmade policies.
+          </label>
+          <hr class="register_hr">
+          <label for="tos">
+            <input type="checkbox" id="agree_tos" name="customer[tos]" value="1" required> I agree Celmade Terms Of Service.
+          </label>
+          <label for="marketing">
+            <input type="checkbox" name="customer[accepts_marketing]" value="true" id="marketing" /> I want to receive the Celmade Marketing & Promotions.
+          </label>
+          <label for="sms_marketing_opt_in">
+            <input type="checkbox" name="Customer[accepts_sms_marketing]" value="true" id="sms_marketing_opt_in" /> I want to receive text message with events and offers.
+          </label>
+        
+          <p class="user_consent_tos">By signing up via text, you agree to receive recurring automated marketing messages, including cart reminders, at the phone number provided. Consent is not a condition of purchase. Reply STOP to unsubscribe. Reply HELP for help. Message frequency varies. Msg &amp; data rates may apply. View our <a class="celmade_privacy_popup" href="https://celmade.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a class="celmade_tos_popup" href="https://celmade.com/policies/terms-of-service" target="_blank" rel="noopener noreferrer">Terms of Service</a>.</p>
+
+	      <div class="action_bottom">
+	        <button class="btn" type="submit">{{ 'customer.register.submit' | t }}</button>
+	        <span class="note">
+						<a href="{{ routes.account_login_url }}">{{ 'customer.register.log_in' | t }}</a>
+						{{ 'customer.general.or' | t }}
+						<a href="{{ routes.root_url }}">{{ 'customer.register.cancel' | t }}</a>
+					</span>
+	      </div>
+	    {% endform %}
+          
+        {% else %}
+
+        <p>Hi, {{ customer.first_name }}.</p>
+        <p>Welcome to Celmade. Please fill out the address below for your default shipping & contact address.</p>
+          
+	    {% form 'customer_address', customer.new_address %}
+
+          <input type="hidden" id="address_first_name_new" class="address_form" name="address[first_name]" value="{{ customer.first_name }}" size="40">
+          <input type="hidden" id="address_last_name_new" class="address_form" name="address[last_name]" value="{{ customer.last_name }}" size="40">
+          <div class="input-row">
+            <label for="address_country_new">{{ 'customer.addresses.country' | t }}</label>
+            <span class="lightly-styled-select">
+              <select id="address_country_new" name="address[country]" data-default="{{form.country}}">{{ all_country_option_tags }}</select>
+            </span>
+          </div>
+          <div class="input-row">
+            <label for="address_company_new">{{ 'customer.addresses.company' | t }}</label>
+            <input type="text" id="address_company_new" class="address_form" name="address[company]" value="{{form.company}}" size="40" />
+          </div>
+          <div class="input-row">
+            <label for="address_phone_new">{{ 'customer.addresses.phone' | t }}</label>
+            <input type="tel" id="address_phone_new" class="address_form" name="address[phone]" value="{{form.phone}}" size="40" />
+          </div>
+          <div class="input-row">
+            <label for="address_address1_new">{{ 'customer.addresses.address1' | t }}</label>
+            <input type="text" id="address_address1_new" class="address_form" name="address[address1]" value="{{form.address1}}" size="40" />
+          </div>
+          <div class="input-row">
+            <label for="address_address2_new">{{ 'customer.addresses.address2' | t }}</label>
+            <input type="text" id="address_address2_new" class="address_form" name="address[address2]" value="{{form.address2}}" size="40" />
+          </div>
+          <div class="input-row">
+            <label for="address_city_new">{{ 'customer.addresses.city' | t }}</label>
+            <input type="text" id="address_city_new" class="address_form" name="address[city]" value="{{form.city}}" size="40" />
+          </div>
+          <div id="address_province_container_new" class="input-row">
+            <label for="address_province_new">{{ 'customer.addresses.province' | t }}</label>
+            <span class="lightly-styled-select">
+              <select id="address_province_new" class="address_form" name="address[province]" data-default="{{form.province}}"></select>
+            </span>
+          </div>
+		  <div class="input-row">
+            <label for="address_zip_new">{{ 'customer.addresses.zip' | t }}</label>
+            <input type="text" id="address_zip_new" class="address_form" name="address[zip]" value="{{form.zip}}" size="40">
+          </div>
+          <div class="input-row">
+            <label>
+              <input type="hidden" id="address_default_address_new" name="address[default]" value="1">
+            </label>
+          </div>
+          <input type="hidden" name="return_to" value="/account" /><br />
+          <div class="action_bottom">
+            <p>
+              <button class="btn" type="submit">Add Address</button>
+            </p>
+          <span class="note"><a href="#" onclick="$('#add_address').toggleClass('hidden'); return false;">{{ 'customer.addresses.cancel' | t }}</a></span>
+        </div>
+      {% endform %}
+      {% endif %}
+
+	  </div><!-- /#create-customer -->
+  </div>
+</div>
+
+<script src="{{ 'shopify_common.js' | shopify_asset_url }}"></script>
+<script type="text/javascript" charset="utf-8">
+document.addEventListener("DOMContentLoaded", function(event) {
+  $('.address-delete').on('click', function(evt) {
+    evt.preventDefault();
+    var $el = $(this);
+    var target = $el.data('target');
+    var confirmMessage = $el.data('confirm-message');
+
+    if (
+      confirm(confirmMessage || 'Are you sure you wish to delete this address?')
+    ) {
+      Shopify.postLink(target, {
+        parameters: { _method: 'delete' }
+      });
+    }
+  });
+
+  $('.address-edit-toggle').on('click', function(evt) {
+    evt.preventDefault();
+    var formId = $(this).data('form-id');
+    var $editButton = $(this);
+    var $editAddress = $('#edit_address_' + formId);
+    var isExpanded = $editButton.attr('aria-expanded') === 'true';
+
+    $editAddress.toggleClass('hidden');
+    $editButton.attr('aria-expanded', !isExpanded).focus();
+  });
+
+  // initialize observers on address selectors
+  new Shopify.CountryProvinceSelector('address_country_new', 'address_province_new', {hideElement: 'address_province_container_new'});
+  {% for address in customer.addresses %}
+    new Shopify.CountryProvinceSelector('address_country_{{address.id}}', 'address_province_{{address.id}}', {hideElement: 'address_province_container_{{address.id}}'});
+  {% endfor %}
+});
+</script>
+<style>
+.lightly-styled-select>input#address_province_new {
+    border: none !important;
+}
+</style>
+<script src="{{ 'jquery-3.6.1.min.js' | asset_url }}"></script>
+<script>
+jQuery(function() {
+jQuery('#customer_address').submit(function(event) {
+  event.preventDefault();
+  var data = jQuery(this).serialize();
+
+ //create new account
+  jQuery.post('/account', data)
+    .done(function(data){
+    var logErrors = jQuery(data).find('.errors').text();
+
+    //if there are errors show them in the html form
+    if (logErrors != "" && logErrors != 'undefined'){
+        jQuery('#customer_address .errors').html(logErrors);
+        jQuery('#customer_address .errors').show();
+
+    //if account creation is successful show checkout page
+    }else{
+       console.log('success');
+      document.location.href = '/account';
+    }
+    }).fail(function(){console.log('error');});
+   return false;
+}); 
+});
+</script>
+<script>
+function toggle(source) {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i] != source)
+            checkboxes[i].checked = source.checked;
+    }
+}
+</script>
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"> </script> 
+<script type="text/javascript"> 
+if (!wcs_add) var wcs_add={};
+wcs_add["wa"] = "s_24871973d84f";
+if (!_nasa) var _nasa={};
+if(window.wcs){
+wcs.inflow();
+wcs_do(_nasa);
+}
+</script>

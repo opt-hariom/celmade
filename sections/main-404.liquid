@@ -1,0 +1,31 @@
+<div class="page-section-spacing">
+  <div class="page-header">
+    {% comment %}
+    <h1 class="majortitle">{{ 'general.404.title' | t }}</h1>
+    {% endcomment %}
+    <h1 class="majortitle">The product or page has been moved.</h1>
+
+  </div>
+  <div class="spaced-row align-centre">
+    <p>{{ 'general.404.subtext_html' | t: root_url: routes.root_url, search_url: routes.search_url }}</p>
+  </div>
+  <div class="main-search">
+    <div class="main-search__container">
+      <form class="main-search__form" action="{{ routes.search_url }}" method="get" autocomplete="off">
+        <input type="hidden" name="type" value="{{ settings.search_type }}" />
+        <input type="hidden" name="options[prefix]" value="last" />
+        <button class="main-search__button button notabutton" type="submit" aria-label="{{ 'layout.header.search_submit' | t }}">{% render 'svg-search' %}</button>
+        <div class="main-search__input-container">
+          <input
+                class="main-search__input"
+                type="text"
+                name="q"
+                autocomplete="off"
+                placeholder="{{ 'layout.search.placeholder' | t | escape }}"
+                aria-label="{{ 'layout.search.title' | t | escape }}"
+                value="{{ search.terms | escape }}" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

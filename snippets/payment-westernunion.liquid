@@ -1,0 +1,69 @@
+<div class="celmade_payment_infowrapper">
+  <h5 class="celmade_payment_title">Western Union</h5>
+  <p class="payment_discount">* Western Union</p>
+  <div class="user-payment-guide">
+    <ul>
+      <li><a href="https://www.westernunion.com/de/en/how-to-send-money-with-wu.html" target="_blank" class="payment_links" rel="nofollow">How to use Western Union</a></li>
+    </ul>
+  </div>
+  <h6 class="payment-detail-title">Account Details</h6>
+  <div class="user-payment-detail">
+    <ul>
+      <li>Country: South Korea</li>
+      <li>Last Name (Family Name): Kim</li>
+      <li>First Name (Given Name): Jae Sill</li>
+      <li>After remittance, please use the form below to inform us your remittance information or send us to treatmentkorea2021@gmail.com </li>
+    </ul>
+  </div>
+  {% form 'contact' %}
+    {% if form.errors %}
+      <ul class="errors">
+      {% for field in form.errors %}
+        <li>{{ field | replace: 'body','Message' | capitalize }} - {{ form.errors.messages[field] }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+    <br /><br />
+    <div class="flexible-layout flexible-layout--form">
+      <div class="column column--full"><h6 class="celmade_payment_title">Sender's Information</h6></div>
+      <input type="hidden" id="contact_remittance" name="contact[title]" value="Western Union Remittance Notification" />
+      <input type="hidden" id="contact_sender" name="contact[notification_type]" value="Sender Information" />
+      <div class="column column--full">
+        <label for="address_country">{{ 'customer.addresses.country' | t }}</label><br />
+        <select id="address_country" name="address[country]" data-default="{{form.country}}" class="celmade-country-select" />{{ all_country_option_tags }}</select>
+      </div>
+      <div class="column column--half">
+        <label for="contact_first_name">First Name</label><br />
+        <input type="text" autocomplete="first_name" required id="contact_first_name" name="contact[first_name]" value="{% if form.first_name %}{{ form.first_name }}{% elsif customer %}{{ customer.first_name }}{% endif %}" />
+      </div>
+      <div class="column column--half">
+        <label for="contact_first_name">Last Name</label><br />
+        <input type="text" autocomplete="last_name" required id="contact_last_name" name="contact[last_name]" value="{% if form.last_name %}{{ form.last_name }}{% elsif customer %}{{ customer.last_name }}{% endif %}" />
+      </div>
+      <input type="hidden" id="contact_email"  name="contact[email]" autocomplete="email" spellcheck="false" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}" />
+      <div class="column column--half">
+        <label for="contact_order_number">Order Number</label><br />
+        <input type="text" id="contact_order" name="contact[order_number]" value="" />
+      </div>
+      <div class="column column--half">
+        <label for="contact_phone">Phone</label><br />
+        <input type="tel" id="contact_form" autocomplete="tel" name="contact[{{ 'contact.form.phone' | t }}]" required value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" />
+      </div>
+      <div class="column column--half">
+        <label for="contact_MTCN">Western Union MTCN</label><br />
+        <input type="text" id="contact_MTCN" name="contact[MTCN]" value="" required />
+      </div>
+      <div class="column column--half">
+        <label for="contact_amount">Remittance Amount</label><br />
+        <input type="number" id="contact_amount" name="contact[amount]" value="" required />
+      </div>
+      <div class="column column--full">
+        <label for="message">Note for Celmade</label><br />
+        <textarea id="message" name="contact[body]" class="celmade-payment-msg">{{ form.body }}</textarea>
+      </div>
+    </div>
+    <div class="lightly-spaced-row">
+      <button type="submit">{{ 'contact.form.send' | t }}</button>
+    </div>
+  {% endform %}
+</div>

@@ -1,0 +1,411 @@
+{% style %}
+div.star-container>svg {
+  width: 18px;
+  height: 18px;
+}
+.yotpo-star-ratings-layout.yotpo-layout-header-wrapper {
+    margin-bottom: 12px !important;
+}
+.sku {
+    margin-bottom: 6px;
+}
+.celmade_tab {
+  display: flex;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  width: 100%;
+}
+.celmade_tab button {
+  background-color: #f7f7f7;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 14px;
+  color: #707173;
+  width: 20%;
+  text-transform: none;
+}
+.celmade_tab button+button {
+ border-left: 1px solid #ccc;
+}
+@media only screen and (max-width: 767px) {
+  .celmade_tab {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    width: 100%;
+  }
+  .celmade_tab button {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+ .celmade_tab button+button {
+   border-top: 1px solid #ccc;
+  }
+}
+.celmade_tab button:hover {
+  background-color: #ddd;
+}
+.celmade_tab button.active {
+  background-color: #c49a6c;
+  color: #fff;
+  border: 1px solid #c49a6c;
+}
+.celmade_tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.celmade_tab_link {
+  text-decoration: none;
+  color: #707173;
+}
+.Tab_1_Set, .Tab_2_Set, .Tab_3_Set, .Tab_4_Set, .Tab_5_Set {
+  display: block;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+{% if section.settings.content_type_1 == 'content_text' or section.settings.content_type_2 == 'content_text' or section.settings.content_type_3 == 'content_text' or section.settings.content_type_4 == 'content_text' or section.settings.content_type_5 == 'content_text' %}
+  .Tab_1_Set, .Tab_2_Set, .Tab_3_Set, .Tab_4_Set, .Tab_5_Set {
+    margin: 30px;
+  }
+  @media only screen and (max-width: 767px) {
+    .Tab_1_Set, .Tab_2_Set, .Tab_3_Set, .Tab_4_Set, .Tab_5_Set {
+      margin: 6px !important;
+    }
+  }
+{% endif %}}
+.use-content-bg {
+  background: {{ section.settings.content_tab_bg_color }} !important;
+}
+{% endstyle %}
+{% liquid
+  assign tab_1 = section.settings.detail-tab-1
+  assign tab_2 = section.settings.detail-tab-2
+  assign tab_3 = section.settings.detail-tab-3
+  assign tab_4 = section.settings.detail-tab-4
+  assign tab_5 = section.settings.detail-tab-5
+%}
+<div id="section-id-{{ section.id }}" class="container {% if section.settings.use_alt_bg %}use-content-bg fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %}">
+{%- if tab_1 != blank or tab_2 != blank or tab_3 != blank or tab_4 != blank or tab_5 != blank -%}
+<div class="celmade_tab">
+  {% if tab_1 != blank %}<button class="celmade_tablinks active" onclick="productTab(event, 'tabDetail_1')">{% if section.settings.content_type_1 == 'content_link' %}<a href="{{ section.settings.link_1 }}" class="celmade_tab_link">{{ tab_1 }}</a>{% else %}{{ tab_1 }}{% endif %}</button>{% endif %}
+  {% if tab_2 != blank %}<button class="celmade_tablinks" onclick="productTab(event, 'tabDetail_2')">{% if section.settings.content_type_2 == 'content_link' %}<a href="{{ section.settings.link_2 }}" class="celmade_tab_link">{{ tab_2 }}</a>{% else %}{{ tab_2 }}{% endif %}</button>{% endif %}
+  {% if tab_3 != blank %}<button class="celmade_tablinks" onclick="productTab(event, 'tabDetail_3')">{% if section.settings.content_type_3 == 'content_link' %}<a href="{{ section.settings.link_3 }}" class="celmade_tab_link">{{ tab_3 }}</a>{% else %}{{ tab_3 }}{% endif %}</button>{% endif %}
+  {% if tab_4 != blank %}<button class="celmade_tablinks" onclick="productTab(event, 'tabDetail_4')">{% if section.settings.content_type_4 == 'content_link' %}<a href="{{ section.settings.link_4 }}" class="celmade_tab_link">{{ tab_4 }}</a>{% else %}{{ tab_4 }}{% endif %}</button>{% endif %}
+  {% if tab_5 != blank %}<button class="celmade_tablinks" onclick="productTab(event, 'tabDetail_5')">{% if section.settings.content_type_5 == 'content_link' %}<a href="{{ section.settings.link_5 }}" class="celmade_tab_link">{{ tab_5 }}</a>{% else %}{{ tab_5 }}{% endif %}</button>{% endif %}
+</div>
+{%- endif -%}
+<div id="tabDetail_1" class="celmade_tabcontent">
+  {% if section.settings.content_type_1 == 'description' %}<div class="Tab_1_Set">{{ product.description }}</div>{% endif %}
+  {% if section.settings.content_type_1 == 'content_page' %}<div class="Tab_1_Set">{{ pages[section.settings.page_1].content }}</div>{% endif %}
+  {% if section.settings.content_type_1 == 'content_text' %}<div class="Tab_1_Set">{{ section.settings.content_text_1 }}</div>{% endif %}
+</div>
+
+<div id="tabDetail_2" class="celmade_tabcontent">
+  {% if section.settings.content_type_2 == 'description' %}<div class="Tab_2_Set">{{ product.description }}</div>{% endif %}
+  {% if section.settings.content_type_2 == 'content_page' %}<div class="Tab_2_Set">{{ pages[section.settings.page_2].content }}</div>{% endif %}
+  {% if section.settings.content_type_2 == 'content_text' %}<div class="Tab_2_Set">{{ section.settings.content_text_2 }}</div>{% endif %}
+</div>
+
+<div id="tabDetail_3" class="celmade_tabcontent">
+  {% if section.settings.content_type_3 == 'description' %}<div class="Tab_3_Set">{{ product.description }}</div>{% endif %}
+  {% if section.settings.content_type_3 == 'content_page' %}<div class="Tab_3_Set">{{ pages[section.settings.page_3].content }}</div>{% endif %}
+  {% if section.settings.content_type_3 == 'content_text' %}<div class="Tab_3_Set">{{ section.settings.content_text_3 }}</div>{% endif %}
+</div>
+
+<div id="tabDetail_4" class="celmade_tabcontent">
+  {% if section.settings.content_type_4 == 'description' %}<div class="Tab_4_Set">{{ product.description }}</div>{% endif %}
+  {% if section.settings.content_type_4 == 'content_page' %}<div class="Tab_4_Set">{{ pages[section.settings.page_4].content }}</div>{% endif %}
+  {% if section.settings.content_type_4 == 'content_text' %}<div class="Tab_4_Set">{{ section.settings.content_text_4 }}</div>{% endif %}
+</div>
+
+<div id="tabDetail_5" class="celmade_tabcontent">
+  {% if section.settings.content_type_5 == 'description' %}<div class="Tab_5_Set">{{ product.description }}</div>{% endif %}
+  {% if section.settings.content_type_5 == 'content_page' %}<div class="Tab_5_Set">{{ pages[section.settings.page_5].content }}</div>{% endif %}
+  {% if section.settings.content_type_5 == 'content_text' %}<div class="Tab_5_Set">{{ section.settings.content_text_5 }}</div>{% endif %}
+</div>
+</div>
+<script>
+function productTab(evt, tabDetail) {
+  var i, celmade_tabcontent, celmade_tablinks;
+  celmade_tabcontent = document.getElementsByClassName("celmade_tabcontent");
+  for (i = 0; i < celmade_tabcontent.length; i++) {
+    celmade_tabcontent[i].style.display = "none";
+  }
+  celmade_tablinks = document.getElementsByClassName("celmade_tablinks");
+  for (i = 0; i < celmade_tablinks.length; i++) {
+    celmade_tablinks[i].className = celmade_tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabDetail).style.display = "block";
+  if(evt) evt.currentTarget.className += " active";
+    else document.querySelector('button.celmade_tablinks').className += " active";
+}
+
+document.body.addEventListener('DOMContentLoaded', productTab(event, 'tabDetail_1'));
+</script>
+
+{% schema %}
+{
+  "name": "Celmade Product Tabs",
+  "class": "section-main-product page-section-spacing page-section-spacing--no-top-mobile",
+  "settings": [
+    {
+      "type": "text",
+      "id": "detail-tab-1",
+      "label": "Tab Heading 1",
+      "default": "Description"
+    },
+    {
+      "type": "select",
+      "id": "content_type_1",
+      "label": "Content Type 1",
+      "options": [
+        {
+          "value": "description",
+          "label": "Description"
+        },
+        {
+          "value": "content_page",
+          "label": "Content Page"
+        },
+        {
+          "value": "content_link",
+          "label": "Content Link"
+        },
+        {
+          "value": "content_text",
+          "label": "Liquid Code"
+        }
+      ],
+      "default": "description"
+    },
+    {
+      "type": "page",
+      "id": "page_1",
+      "label": "Page 1"
+    },
+    {
+      "type": "url",
+      "id": "link_1",
+      "label": "Link 1"
+    },
+    {
+      "type": "liquid",
+      "id": "content_text_1",
+      "label": "Content 1 Liquid Code"
+    },
+    {
+      "type": "text",
+      "id": "detail-tab-2",
+      "label": "Tab Heading 2",
+      "default": "Reviews"
+    },
+    {
+      "type": "select",
+      "id": "content_type_2",
+      "label": "Content Type 2",
+      "options": [
+        {
+          "value": "description",
+          "label": "Description"
+        },
+        {
+          "value": "content_page",
+          "label": "Content Page"
+        },
+        {
+          "value": "content_link",
+          "label": "Content Link"
+        },
+        {
+          "value": "content_text",
+          "label": "Liquid Code"
+        }
+      ],
+      "default": "content_page"
+    },
+    {
+      "type": "page",
+      "id": "page_2",
+      "label": "Page 2"
+    },
+    {
+      "type": "url",
+      "id": "link_2",
+      "label": "Link 2"
+    },
+    {
+      "type": "liquid",
+      "id": "content_text_2",
+      "label": "Content 2 Liquid Code"
+    },
+    {
+      "type": "text",
+      "id": "detail-tab-3",
+      "label": "Tab Heading 3",
+      "default": "Shipping & Delivery"
+    },
+    {
+      "type": "select",
+      "id": "content_type_3",
+      "label": "Content Type 3",
+      "options": [
+        {
+          "value": "description",
+          "label": "Description"
+        },
+        {
+          "value": "content_page",
+          "label": "Content Page"
+        },
+        {
+          "value": "content_link",
+          "label": "Content Link"
+        },
+        {
+          "value": "content_text",
+          "label": "Liquid Code"
+        }
+      ],
+      "default": "content_page"
+    },
+    {
+      "type": "page",
+      "id": "page_3",
+      "label": "Page 3"
+    },
+    {
+      "type": "url",
+      "id": "link_3",
+      "label": "Link 3"
+    },
+    {
+      "type": "liquid",
+      "id": "content_text_3",
+      "label": "Content 3 Liquid Code"
+    },
+    {
+      "type": "text",
+      "id": "detail-tab-4",
+      "label": "Tab Heading 4",
+      "default": "Specification"
+    },
+    {
+      "type": "select",
+      "id": "content_type_4",
+      "label": "Content Type 4",
+      "options": [
+        {
+          "value": "description",
+          "label": "Description"
+        },
+        {
+          "value": "content_page",
+          "label": "Content Page"
+        },
+        {
+          "value": "content_link",
+          "label": "Content Link"
+        },
+        {
+          "value": "content_text",
+          "label": "Liquid Code"
+        }
+      ],
+      "default": "content_page"
+    },
+    {
+      "type": "page",
+      "id": "page_4",
+      "label": "Page 4"
+    },
+    {
+      "type": "url",
+      "id": "link_4",
+      "label": "Link 4"
+    },
+    {
+      "type": "liquid",
+      "id": "content_text_4",
+      "label": "Content 4 Liquid Code"
+    },
+    {
+      "type": "text",
+      "id": "detail-tab-5",
+      "label": "Tab Heading 5",
+      "default": "Additional Information"
+    },
+    {
+      "type": "select",
+      "id": "content_type_5",
+      "label": "Content Type 5",
+      "options": [
+        {
+          "value": "description",
+          "label": "Description"
+        },
+        {
+          "value": "content_page",
+          "label": "Content Page"
+        },
+        {
+          "value": "content_link",
+          "label": "Content Link"
+        },
+        {
+          "value": "content_text",
+          "label": "Liquid Code"
+        }
+      ],
+      "default": "content_link"
+    },
+    {
+      "type": "page",
+      "id": "page_5",
+      "label": "Page 5"
+    },
+    {
+      "type": "url",
+      "id": "link_5",
+      "label": "Link 5"
+    },
+    {
+      "type": "liquid",
+      "id": "content_text_5",
+      "label": "Content 5 Liquid Code"
+    },
+    {
+      "id": "use_content_bg",
+      "type": "checkbox",
+      "label": "Use alternate background color",
+      "default": false
+    },
+    {
+      "id": "content_tab_bg_color",
+      "type": "color",
+      "label": "Use alternate background color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Celmade Product Tabs",
+      "settings": {
+      }
+    }
+  ]
+}
+{% endschema %}
